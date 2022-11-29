@@ -1,8 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="RecruitmentAgency">
   <customUserInfoDefinitions/>
-  <users/>
-  <roles/>
-  <groups/>
-  <memberships/>
+  <users>
+    <user userName="company.team.employee">
+      <firstName>Company Team</firstName>
+      <lastName>Employee 1</lastName>
+      <manager>company.interaction.team.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="company.interaction.team.chief">
+      <firstName>Company Interaction</firstName>
+      <lastName>Chief</lastName>
+      <manager>company.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="premium.hiring.employee">
+      <firstName>Premium Hiring</firstName>
+      <lastName>Employee 1</lastName>
+      <manager>premium.hiring.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="premium.hiring.chief">
+      <firstName>Premium Hiring</firstName>
+      <lastName>Chief</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="company.team.employee2">
+      <firstName>Company Team</firstName>
+      <lastName>Employee 2</lastName>
+      <manager>company.team.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="premium.hiring.employee2">
+      <firstName>Premium Hiring</firstName>
+      <lastName>Employee 2</lastName>
+      <manager>premium.hiring.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr.employee1">
+      <firstName>HR Employee</firstName>
+      <lastName>1</lastName>
+      <manager>hr.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr.employee2">
+      <firstName>HR Employee</firstName>
+      <lastName>2</lastName>
+      <manager>hr.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="hr.chief">
+      <firstName>HR</firstName>
+      <lastName>Chief</lastName>
+      <manager>company.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="development.employee1">
+      <firstName>Development Employee </firstName>
+      <lastName>1</lastName>
+      <manager>development.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="development.employee2">
+      <firstName>Development Employee</firstName>
+      <lastName>2</lastName>
+      <manager>development.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="development.chief">
+      <firstName>Development</firstName>
+      <lastName>Chief</lastName>
+      <manager>company.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="company.chief">
+      <firstName>Company</firstName>
+      <lastName>Chief</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="client1">
+      <firstName>Client</firstName>
+      <lastName>1</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="client2">
+      <firstName>Client</firstName>
+      <lastName>2</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="Employee">
+      <displayName>Employee</displayName>
+    </role>
+    <role name="Chief">
+      <displayName>Chief</displayName>
+    </role>
+    <role name="User">
+      <displayName>User</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Agency">
+      <displayName>Agency</displayName>
+    </group>
+    <group name="CompanyInteractionTeam" parentPath="/Agency">
+      <displayName>CompanyInteractionTeam</displayName>
+    </group>
+    <group name="PremiumHiringTeam" parentPath="/Agency">
+      <displayName>PremiumHiringTeam</displayName>
+    </group>
+    <group name="Company">
+      <displayName>Company</displayName>
+    </group>
+    <group name="Client">
+      <displayName>Client</displayName>
+    </group>
+    <group name="HRTeam" parentPath="/Company">
+      <displayName>HRTeam</displayName>
+    </group>
+    <group name="DevelopmentTeam" parentPath="/Company">
+      <displayName>DevelopmentTeam</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>company.team.employee</userName>
+      <roleName>Employee</roleName>
+      <groupName>CompanyInteractionTeam</groupName>
+      <groupParentPath>/Agency</groupParentPath>
+    </membership>
+    <membership>
+      <userName>company.interaction.team.chief</userName>
+      <roleName>Chief</roleName>
+      <groupName>CompanyInteractionTeam</groupName>
+      <groupParentPath>/Agency</groupParentPath>
+    </membership>
+    <membership>
+      <userName>premium.hiring.employee</userName>
+      <roleName>Employee</roleName>
+      <groupName>PremiumHiringTeam</groupName>
+      <groupParentPath>/Agency</groupParentPath>
+    </membership>
+    <membership>
+      <userName>premium.hiring.chief</userName>
+      <roleName>Chief</roleName>
+      <groupName>PremiumHiringTeam</groupName>
+      <groupParentPath>/Agency</groupParentPath>
+    </membership>
+    <membership>
+      <userName>company.team.employee2</userName>
+      <roleName>Employee</roleName>
+      <groupName>CompanyInteractionTeam</groupName>
+      <groupParentPath>/Agency</groupParentPath>
+    </membership>
+    <membership>
+      <userName>premium.hiring.employee2</userName>
+      <roleName>Employee</roleName>
+      <groupName>PremiumHiringTeam</groupName>
+      <groupParentPath>/Agency</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr.employee1</userName>
+      <roleName>Employee</roleName>
+      <groupName>HRTeam</groupName>
+      <groupParentPath>/Company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr.employee2</userName>
+      <roleName>Employee</roleName>
+      <groupName>HRTeam</groupName>
+      <groupParentPath>/Company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>hr.chief</userName>
+      <roleName>Chief</roleName>
+      <groupName>HRTeam</groupName>
+      <groupParentPath>/Company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>development.employee1</userName>
+      <roleName>Employee</roleName>
+      <groupName>DevelopmentTeam</groupName>
+      <groupParentPath>/Company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>development.employee2</userName>
+      <roleName>Employee</roleName>
+      <groupName>DevelopmentTeam</groupName>
+      <groupParentPath>/Company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>development.chief</userName>
+      <roleName>Chief</roleName>
+      <groupName>DevelopmentTeam</groupName>
+      <groupParentPath>/Company</groupParentPath>
+    </membership>
+    <membership>
+      <userName>company.chief</userName>
+      <roleName>Chief</roleName>
+      <groupName>Company</groupName>
+    </membership>
+    <membership>
+      <userName>client1</userName>
+      <roleName>User</roleName>
+      <groupName>Agency</groupName>
+    </membership>
+    <membership>
+      <userName>client2</userName>
+      <roleName>User</roleName>
+      <groupName>Agency</groupName>
+    </membership>
+  </memberships>
 </organization:Organization>

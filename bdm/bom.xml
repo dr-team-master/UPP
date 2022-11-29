@@ -12,39 +12,11 @@
             <queries/>
             <indexes/>
         </businessObject>
-        <businessObject qualifiedName="com.company.model.AgencyEmployee">
-            <fields>
-                <field type="STRING" length="255" name="username" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="password" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="firstName" nullable="true" collection="false"/>
-                <field type="STRING" length="255" name="lastName" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
         <businessObject qualifiedName="com.company.model.AgencyService">
             <fields>
                 <field type="STRING" length="255" name="name" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="price" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
-        <businessObject qualifiedName="com.company.model.Client">
-            <fields>
-                <field type="STRING" length="255" name="firstName" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="lastName" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="username" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="password" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="phoneNumber" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="LAZY" name="address" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="cv" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="motivationLetter" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Education" fetchType="LAZY" name="education" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -57,9 +29,9 @@
                 <field type="STRING" length="255" name="username" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="password" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="LAZY" name="address" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="EAGER" name="address" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="phoneNumber" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Education" fetchType="LAZY" name="education" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Education" fetchType="EAGER" name="education" nullable="true" collection="true"/>
                 <field type="TEXT" length="255" name="cv" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="motivationLetter" nullable="false" collection="false"/>
                 <field type="INTEGER" length="255" name="returned" nullable="true" collection="false"/>
@@ -74,7 +46,7 @@
                 <field type="STRING" length="255" name="username" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="password" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="LAZY" name="address" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="EAGER" name="address" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="phoneNumber" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="pib" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="foundationDate" nullable="false" collection="false"/>
@@ -89,7 +61,7 @@
                 <field type="STRING" length="255" name="username" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="password" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="email" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="LAZY" name="address" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="EAGER" name="address" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="pib" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="foundationDate" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="phoneNumber" nullable="false" collection="false"/>
@@ -105,7 +77,7 @@
                 <field type="STRING" length="255" name="degree" nullable="true" collection="false"/>
                 <field type="LOCALDATE" length="255" name="startDate" nullable="true" collection="false"/>
                 <field type="LOCALDATE" length="255" name="endDate" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="LAZY" name="address" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="EAGER" name="address" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="fieldOfStudy" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
             </fields>
@@ -116,11 +88,11 @@
         <businessObject qualifiedName="com.company.model.EmploymentRequest">
             <fields>
                 <field type="INTEGER" length="255" name="numberOfEmployees" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Education" fetchType="LAZY" name="education" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Education" fetchType="EAGER" name="education" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="employeePosition" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="experience" nullable="false" collection="false"/>
                 <field type="DOUBLE" length="255" name="employmentBudget" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.AgencyEmployee" fetchType="LAZY" name="agencyEmployee" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="agencyEmployee" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -131,9 +103,9 @@
                 <field type="LOCALDATE" length="255" name="optionalDates" nullable="true" collection="true"/>
                 <field type="STRING" length="255" name="hrMember" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="projectTeamMember" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.AgencyEmployee" fetchType="LAZY" name="agencyEmployee" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="agencyEmployee" nullable="true" collection="false"/>
                 <field type="LOCALDATE" length="255" name="selectedDate" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.InterviewerImpression" fetchType="LAZY" name="interviewImpressions" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.InterviewerImpression" fetchType="LAZY" name="interviewImpressions" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -151,7 +123,7 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.Offer">
             <fields>
-                <relationField type="AGGREGATION" reference="com.company.model.Client" fetchType="LAZY" name="suggestedClients" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="suggestedClients" nullable="true" collection="true"/>
                 <field type="DOUBLE" length="255" name="price" nullable="false" collection="false"/>
                 <field type="BOOLEAN" length="255" name="accepted" nullable="true" collection="false"/>
             </fields>
@@ -161,14 +133,14 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.PremiumHiring">
             <fields>
-                <relationField type="AGGREGATION" reference="com.company.model.Client" fetchType="LAZY" name="candidate" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="candidate" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.Company" fetchType="LAZY" name="recommendedCompanies" nullable="true" collection="true"/>
                 <relationField type="AGGREGATION" reference="com.company.model.Company" fetchType="LAZY" name="selectedCompany" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.AgencyEmployee" fetchType="LAZY" name="agencyEmployee" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="agencyEmployee" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="personalisedCV" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="personalisedLetter" nullable="false" collection="false"/>
                 <field type="BOOLEAN" length="255" name="successful" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Interview" fetchType="LAZY" name="interview" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Interview" fetchType="LAZY" name="interview" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
