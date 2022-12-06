@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+  <process:MainProcess xmi:id="_XxRwwHWXEe21g5Lb2XJvjw" name="CompanyRegistration" bonitaModelVersion="7.12.0-004">
+    <elements xmi:type="process:Pool" xmi:id="_XxRwwXWXEe21g5Lb2XJvjw" name="CompanyRegistrationPool">
+      <elements xmi:type="process:Lane" xmi:id="_XxRwwnWXEe21g5Lb2XJvjw" name="Company lane" actor="_9ZEUoHWbEe21g5Lb2XJvjw">
+        <elements xmi:type="process:StartEvent" xmi:id="_XxRww3WXEe21g5Lb2XJvjw" name="Start1" outgoing="_ZaUKIHWiEe21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_XxRwxHWXEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_XxRwxXWXEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_XxRwxnWXEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <elements xmi:type="process:Lane" xmi:id="_MoNNwHWbEe21g5Lb2XJvjw" name="Employee lane" actor="__8yOkHWbEe21g5Lb2XJvjw">
+        <elements xmi:type="process:Task" xmi:id="_VblmkHWpEe21g5Lb2XJvjw" name="revizijaZaposleni" outgoing="_YUrTkHWpEe21g5Lb2XJvjw" incoming="_Q-uZsHWpEe21g5Lb2XJvjw" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_Q-phMnWpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_Q-phMXWpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_Q-phM3WpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_f130KXWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130KnWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130K3WpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130LHWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.name" content="companyRegistrationRequestInput?.name" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130LXWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130LnWpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setName">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_f130L3WpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130MHWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130MXWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130MnWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.username" content="companyRegistrationRequestInput?.username" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130M3WpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130NHWpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setUsername">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_f130NXWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130NnWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130N3WpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130OHWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.password" content="companyRegistrationRequestInput?.password" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130OXWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130OnWpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPassword">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_f130O3WpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130PHWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130PXWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130PnWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.email" content="companyRegistrationRequestInput?.email" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130P3WpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130QHWpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setEmail">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_f130QXWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130QnWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130Q3WpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130RHWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.address" content="//Retrieve aggregated Address using its DAO and persistenceId&#xD;&#xA;def addressVar = addressDAO.findByPersistenceId(companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null)&#xD;&#xA;if (!addressVar) {&#xD;&#xA;&#x9;if (companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Address` with the persistence id &quot; + companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;return addressVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Address">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130RXWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_f130RnWpEe21g5Lb2XJvjw" name="addressDAO" content="addressDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.AddressDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130R3WpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setAddress">
+              <inputTypes>com.company.model.Address</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_f130SHWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130SXWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130SnWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130S3WpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.pib" content="companyRegistrationRequestInput?.pib" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130THWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130TXWpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPib">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_f130TnWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130T3WpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130UHWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130UXWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.foundationDate" content="companyRegistrationRequestInput?.foundationDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130UnWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130U3WpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setFoundationDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_f130VHWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130VXWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130VnWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130V3WpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.phoneNumber" content="companyRegistrationRequestInput?.phoneNumber" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130WHWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130WXWpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPhoneNumber">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_f130WnWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_f130W3WpEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_f130XHWpEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_f130XXWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.rejectionReason" content="companyRegistrationRequestInput?.rejectionReason" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_f130XnWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_f130X3WpEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setRejectionReason">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_tQ3ZoHWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_tQ3ZoXWpEe21g5Lb2XJvjw" name="isRejected" content="isRejected" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_t497cHWpEe21g5Lb2XJvjw" name="isRejected" dataType="_XxRw7HWXEe21g5Lb2XJvjw"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_tQ3ZonWpEe21g5Lb2XJvjw" name="isRejectedInput" content="isRejectedInput" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_uYkokHWpEe21g5Lb2XJvjw" name="isRejectedInput" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_uYkokXWpEe21g5Lb2XJvjw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_tQ4nwHWpEe21g5Lb2XJvjw" type="ASSIGNMENT"/>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_Q-phNHWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_Q-phNXWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_Q-phNnWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_Q-phOHWpEe21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_Q-phN3WpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <BoundaryIntermediateEvents xmi:type="process:BoundaryTimerEvent" xmi:id="_i6rFEHWtEe21g5Lb2XJvjw" name="3 dana" outgoing="_gQE_sHWwEe21g5Lb2XJvjw">
+            <condition xmi:type="expression:Expression" xmi:id="_jo9ucHWtEe21g5Lb2XJvjw" name="3 Days 00:00:00" content="259200000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+          </BoundaryIntermediateEvents>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_VblmmnWpEe21g5Lb2XJvjw">
+            <targetForm xmi:type="expression:Expression" xmi:id="_Vblmm3WpEe21g5Lb2XJvjw" name="processCompanyForm" content="b500a3c6-17d5-4896-a2a3-0c36ded468fe" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_VblmmXWpEe21g5Lb2XJvjw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_f13NEHWpEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" dataReference="companyRegistrationRequest" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NEXWpEe21g5Lb2XJvjw" name="name" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NEnWpEe21g5Lb2XJvjw" name="username" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NE3WpEe21g5Lb2XJvjw" name="password" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NFHWpEe21g5Lb2XJvjw" name="email" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NFXWpEe21g5Lb2XJvjw" name="address" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_f13NFnWpEe21g5Lb2XJvjw" name="persistenceId_string" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NF3WpEe21g5Lb2XJvjw" name="pib" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NGHWpEe21g5Lb2XJvjw" name="foundationDate" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NGXWpEe21g5Lb2XJvjw" name="phoneNumber" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_f13NGnWpEe21g5Lb2XJvjw" name="rejectionReason" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_q1T9MHWpEe21g5Lb2XJvjw" name="isRejectedInput" type="BOOLEAN">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_q1T9MXWpEe21g5Lb2XJvjw"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130IHWpEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.name != null" errorMessage="name is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_name">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130IXWpEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.username != null" errorMessage="username is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_username">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130InWpEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.password != null" errorMessage="password is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_password">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130I3WpEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.email != null" errorMessage="email is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_email">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130JHWpEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.address != null" errorMessage="Address is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130JXWpEe21g5Lb2XJvjw" expression="!companyRegistrationRequestInput?.address || companyRegistrationRequestInput?.address?.persistenceId_string" errorMessage="Address must reference an existing instance with a persistenceId for CompanyRegistrationRequest" name="aggregation_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130JnWpEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.pib != null" errorMessage="pib is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_pib">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130J3WpEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.foundationDate != null" errorMessage="foundationDate is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_foundationDate">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_f130KHWpEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.phoneNumber != null" errorMessage="phoneNumber is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_phoneNumber">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_VblmnHWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:XORGateway" xmi:id="_zxRyoHWpEe21g5Lb2XJvjw" name="Gateway1" outgoing="_7DI2sHWpEe21g5Lb2XJvjw _u8DeMHWrEe21g5Lb2XJvjw" incoming="_YUrTkHWpEe21g5Lb2XJvjw _uhKDMHWxEe21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_YUnpMnWpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_YUnpMXWpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_YUnpM3WpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ServiceTask" xmi:id="_Xl-6MHWsEe21g5Lb2XJvjw" name="slanjeMejla Kompaniji" outgoing="_bVJ6oHWsEe21g5Lb2XJvjw" incoming="_XmFA0HWsEe21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_XmAvYXWsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_XmAvYHWsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_XmAvYnWsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_XmAvY3WsEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_XmAvZHWsEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_XmAvZXWsEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_XmAvZ3WsEe21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_XmAvZnWsEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:EndEvent" xmi:id="_bVBXwHWsEe21g5Lb2XJvjw" name="End1" incoming="_bVJ6oHWsEe21g5Lb2XJvjw _KdK2kHW8Ee21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_bVB-0XWsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_bVB-0HWsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_bVB-0nWsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ServiceTask" xmi:id="_pr9ysHWtEe21g5Lb2XJvjw" name="slanjeMejla Zaposlenom" outgoing="_tlStUHWwEe21g5Lb2XJvjw" incoming="_gQE_sHWwEe21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_pr_n4XWtEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_pr_n4HWtEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_pr_n4nWtEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_pr_n43WtEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_pr_n5HWtEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_pr_n5XWtEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_pr_n53WtEe21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_pr_n5nWtEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:Task" xmi:id="_fmHnQHWxEe21g5Lb2XJvjw" name="naknadna Revizija" outgoing="_uhKDMHWxEe21g5Lb2XJvjw" incoming="_tlStUHWwEe21g5Lb2XJvjw" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_tlN00XWwEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_tlN00HWwEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_tlN00nWwEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zL6XWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zL6nWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zL63WxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zL7HWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.name" content="companyRegistrationRequestInput?.name" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zL7XWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zL7nWxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setName">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zL73WxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zL8HWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zL8XWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zL8nWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.username" content="companyRegistrationRequestInput?.username" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zL83WxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zL9HWxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setUsername">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zL9XWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zL9nWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zL93WxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zL-HWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.password" content="companyRegistrationRequestInput?.password" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zL-XWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zL-nWxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPassword">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zL-3WxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zL_HWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zL_XWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zL_nWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.email" content="companyRegistrationRequestInput?.email" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zL_3WxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zMAHWxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setEmail">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zMAXWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zMAnWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zMA3WxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zMBHWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.address" content="//Retrieve aggregated Address using its DAO and persistenceId&#xD;&#xA;def addressVar = addressDAO.findByPersistenceId(companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null)&#xD;&#xA;if (!addressVar) {&#xD;&#xA;&#x9;if (companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Address` with the persistence id &quot; + companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;return addressVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Address">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zMBXWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_g9zMBnWxEe21g5Lb2XJvjw" name="addressDAO" content="addressDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.AddressDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zMB3WxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setAddress">
+              <inputTypes>com.company.model.Address</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zMCHWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zMCXWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zMCnWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zMC3WxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.pib" content="companyRegistrationRequestInput?.pib" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zMDHWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zMDXWxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPib">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zMDnWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zMD3WxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zMEHWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zMEXWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.foundationDate" content="companyRegistrationRequestInput?.foundationDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zMEnWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zME3WxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setFoundationDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zMFHWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zMFXWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zMFnWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zMF3WxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.phoneNumber" content="companyRegistrationRequestInput?.phoneNumber" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zMGHWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zMGXWxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPhoneNumber">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g9zMGnWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g9zMG3WxEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_g9zMHHWxEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g9zMHXWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.rejectionReason" content="companyRegistrationRequestInput?.rejectionReason" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_g9zMHnWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g9zMH3WxEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setRejectionReason">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_rNJUwHWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_rNJUwXWxEe21g5Lb2XJvjw" name="isRejected" content="isRejected" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_rzaqkHWxEe21g5Lb2XJvjw" name="isRejected" dataType="_XxRw7HWXEe21g5Lb2XJvjw"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_rNJUwnWxEe21g5Lb2XJvjw" name="isRejectedInput" content="isRejectedInput" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_sNQt8HWxEe21g5Lb2XJvjw" name="isRejectedInput" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_sNQt8XWxEe21g5Lb2XJvjw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_rNJUw3WxEe21g5Lb2XJvjw" type="ASSIGNMENT"/>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_tlN003WwEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_tlN01HWwEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_tlN01XWwEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_tlN013WwEe21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_tlN01nWwEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <BoundaryIntermediateEvents xmi:type="process:BoundaryTimerEvent" xmi:id="_54uYYHWxEe21g5Lb2XJvjw" name="1 dan" outgoing="_5CTiMHW7Ee21g5Lb2XJvjw">
+            <condition xmi:type="expression:Expression" xmi:id="_6ynNwHWxEe21g5Lb2XJvjw" name="30 Days 00:00:00" content="2592000000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+          </BoundaryIntermediateEvents>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_fmI1aXWxEe21g5Lb2XJvjw">
+            <targetForm xmi:type="expression:Expression" xmi:id="_fmI1anWxEe21g5Lb2XJvjw" name="processCompanyForm" content="b500a3c6-17d5-4896-a2a3-0c36ded468fe" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_fmI1aHWxEe21g5Lb2XJvjw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_g9yk0HWxEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" dataReference="companyRegistrationRequest" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk0XWxEe21g5Lb2XJvjw" name="name" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk0nWxEe21g5Lb2XJvjw" name="username" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk03WxEe21g5Lb2XJvjw" name="password" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk1HWxEe21g5Lb2XJvjw" name="email" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk1XWxEe21g5Lb2XJvjw" name="address" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_g9yk1nWxEe21g5Lb2XJvjw" name="persistenceId_string" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk13WxEe21g5Lb2XJvjw" name="pib" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk2HWxEe21g5Lb2XJvjw" name="foundationDate" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk2XWxEe21g5Lb2XJvjw" name="phoneNumber" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_g9yk2nWxEe21g5Lb2XJvjw" name="rejectionReason" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_io5bwHWxEe21g5Lb2XJvjw" name="isRejectedInput" type="BOOLEAN">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_io6C0HWxEe21g5Lb2XJvjw"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL4HWxEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.name != null" errorMessage="name is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_name">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL4XWxEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.username != null" errorMessage="username is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_username">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL4nWxEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.password != null" errorMessage="password is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_password">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL43WxEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.email != null" errorMessage="email is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_email">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL5HWxEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.address != null" errorMessage="Address is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL5XWxEe21g5Lb2XJvjw" expression="!companyRegistrationRequestInput?.address || companyRegistrationRequestInput?.address?.persistenceId_string" errorMessage="Address must reference an existing instance with a persistenceId for CompanyRegistrationRequest" name="aggregation_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL5nWxEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.pib != null" errorMessage="pib is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_pib">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL53WxEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.foundationDate != null" errorMessage="foundationDate is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_foundationDate">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_g9zL6HWxEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.phoneNumber != null" errorMessage="phoneNumber is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_phoneNumber">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_fmI1a3WxEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:Task" xmi:id="_66X3EHW7Ee21g5Lb2XJvjw" name="naknadna Revizija Sefa" outgoing="_4d5YIHW8Ee21g5Lb2XJvjw" incoming="_5CTiMHW7Ee21g5Lb2XJvjw" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_3OLSInW7Ee21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_3OLSIXW7Ee21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_3OLSI3W7Ee21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtSoHW9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtSoXW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtSonW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtSo3W9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.name" content="companyRegistrationRequestInput?.name" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtSpHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtSpXW9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setName">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtSpnW9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtSp3W9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtSqHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtSqXW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.username" content="companyRegistrationRequestInput?.username" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtSqnW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtSq3W9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setUsername">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtSrHW9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtSrXW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtSrnW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtSr3W9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.password" content="companyRegistrationRequestInput?.password" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtSsHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtSsXW9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPassword">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtSsnW9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtSs3W9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtStHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtStXW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.email" content="companyRegistrationRequestInput?.email" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtStnW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtSt3W9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setEmail">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtSuHW9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtSuXW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtSunW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtSu3W9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.address" content="//Retrieve aggregated Address using its DAO and persistenceId&#xD;&#xA;def addressVar = addressDAO.findByPersistenceId(companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null)&#xD;&#xA;if (!addressVar) {&#xD;&#xA;&#x9;if (companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Address` with the persistence id &quot; + companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;return addressVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Address">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtSvHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_2CtSvXW9Ee21g5Lb2XJvjw" name="addressDAO" content="addressDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.AddressDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtSvnW9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setAddress">
+              <inputTypes>com.company.model.Address</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtSv3W9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtSwHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtSwXW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtSwnW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.pib" content="companyRegistrationRequestInput?.pib" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtSw3W9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtSxHW9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPib">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtSxXW9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtSxnW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtSx3W9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtSyHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.foundationDate" content="companyRegistrationRequestInput?.foundationDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtSyXW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtSynW9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setFoundationDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtSy3W9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtSzHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtSzXW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtSznW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.phoneNumber" content="companyRegistrationRequestInput?.phoneNumber" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtSz3W9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtS0HW9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPhoneNumber">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2CtS0XW9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2CtS0nW9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2CtS03W9Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2CtS1HW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput.rejectionReason" content="companyRegistrationRequestInput?.rejectionReason" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_2CtS1XW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_2CtS1nW9Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setRejectionReason">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_5k_GkHW9Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5k_GkXW9Ee21g5Lb2XJvjw" name="isRejected" content="isRejected" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_6LiJMHW9Ee21g5Lb2XJvjw" name="isRejected" dataType="_XxRw7HWXEe21g5Lb2XJvjw"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5k_GknW9Ee21g5Lb2XJvjw" name="isRejectedInput" content="isRejectedInput" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_6kifEHW9Ee21g5Lb2XJvjw" name="isRejectedInput" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_6kifEXW9Ee21g5Lb2XJvjw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_5k_Gk3W9Ee21g5Lb2XJvjw" type="ASSIGNMENT"/>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_3OLSJHW7Ee21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_3OLSJXW7Ee21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_3OLSJnW7Ee21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_3OLSKHW7Ee21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_3OLSJ3W7Ee21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <BoundaryIntermediateEvents xmi:type="process:BoundaryTimerEvent" xmi:id="_DOkh4HW8Ee21g5Lb2XJvjw" name="3 dana- sef" outgoing="_KdK2kHW8Ee21g5Lb2XJvjw">
+            <condition xmi:type="expression:Expression" xmi:id="_F0Z7sHW8Ee21g5Lb2XJvjw" name="3 Days 00:00:00" content="259200000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+          </BoundaryIntermediateEvents>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_66ZFOXW7Ee21g5Lb2XJvjw">
+            <targetForm xmi:type="expression:Expression" xmi:id="_eRNMUHW9Ee21g5Lb2XJvjw" name="processCompanyForm" content="b500a3c6-17d5-4896-a2a3-0c36ded468fe" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_66ZFOHW7Ee21g5Lb2XJvjw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6kHW9Ee21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" dataReference="companyRegistrationRequest" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6kXW9Ee21g5Lb2XJvjw" name="name" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6knW9Ee21g5Lb2XJvjw" name="username" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6k3W9Ee21g5Lb2XJvjw" name="password" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6lHW9Ee21g5Lb2XJvjw" name="email" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6lXW9Ee21g5Lb2XJvjw" name="address" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6lnW9Ee21g5Lb2XJvjw" name="persistenceId_string" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6l3W9Ee21g5Lb2XJvjw" name="pib" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6mHW9Ee21g5Lb2XJvjw" name="foundationDate" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6mXW9Ee21g5Lb2XJvjw" name="phoneNumber" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_2Ci6mnW9Ee21g5Lb2XJvjw" name="rejectionReason" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_2KsJ8HW9Ee21g5Lb2XJvjw" name="isRejectedInput" type="BOOLEAN">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_2KsJ8XW9Ee21g5Lb2XJvjw"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2CsrkHW9Ee21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.name != null" errorMessage="name is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_name">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2CsrkXW9Ee21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.username != null" errorMessage="username is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_username">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2CsrknW9Ee21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.password != null" errorMessage="password is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_password">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2Csrk3W9Ee21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.email != null" errorMessage="email is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_email">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2CsrlHW9Ee21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.address != null" errorMessage="Address is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2CsrlXW9Ee21g5Lb2XJvjw" expression="!companyRegistrationRequestInput?.address || companyRegistrationRequestInput?.address?.persistenceId_string" errorMessage="Address must reference an existing instance with a persistenceId for CompanyRegistrationRequest" name="aggregation_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2CsrlnW9Ee21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.pib != null" errorMessage="pib is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_pib">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2Csrl3W9Ee21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.foundationDate != null" errorMessage="foundationDate is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_foundationDate">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_2CsrmHW9Ee21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.phoneNumber != null" errorMessage="phoneNumber is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_phoneNumber">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_66ZFO3W7Ee21g5Lb2XJvjw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <elements xmi:type="process:Lane" xmi:id="_NDusIHWbEe21g5Lb2XJvjw" name="Company interaction chief lane" actor="_BryHAHWcEe21g5Lb2XJvjw">
+        <elements xmi:type="process:Task" xmi:id="_f_sisHWiEe21g5Lb2XJvjw" name="odabirZaposlenog" outgoing="_Q-uZsHWpEe21g5Lb2XJvjw" incoming="_ZaUKIHWiEe21g5Lb2XJvjw" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_ZaPRoXWiEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_ZaPRoHWiEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_ZaPRonWiEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_Sdhvg3WoEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_SdhvhHWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SdhvhXWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SdhvhnWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.name" content="companyRegistrationRequestInput?.name" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Sdhvh3WoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_SdhviHWoEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setName">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_SdhviXWoEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_SdhvinWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Sdhvi3WoEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SdhvjHWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.username" content="companyRegistrationRequestInput?.username" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_SdhvjXWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_SdhvjnWoEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setUsername">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Sdhvj3WoEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_SdhvkHWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SdhvkXWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SdhvknWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.password" content="companyRegistrationRequestInput?.password" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Sdhvk3WoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_SdhvlHWoEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPassword">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_SdhvlXWoEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_SdhvlnWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Sdhvl3WoEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SdhvmHWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.email" content="companyRegistrationRequestInput?.email" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_SdhvmXWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_SdhvmnWoEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setEmail">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Sdhvm3WoEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_SdhvnHWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SdhvnXWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SdhvnnWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.address" content="//Retrieve aggregated Address using its DAO and persistenceId&#xD;&#xA;def addressVar = addressDAO.findByPersistenceId(companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null)&#xD;&#xA;if (!addressVar) {&#xD;&#xA;&#x9;if (companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Address` with the persistence id &quot; + companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;return addressVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Address">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Sdhvn3WoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_SdhvoHWoEe21g5Lb2XJvjw" name="addressDAO" content="addressDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.AddressDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_SdhvoXWoEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setAddress">
+              <inputTypes>com.company.model.Address</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_SdhvonWoEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Sdhvo3WoEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SdhvpHWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SdhvpXWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.pib" content="companyRegistrationRequestInput?.pib" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_SdhvpnWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Sdhvp3WoEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPib">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_SdhvqHWoEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_SdhvqXWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SdhvqnWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Sdhvq3WoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.foundationDate" content="companyRegistrationRequestInput?.foundationDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_SdhvrHWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_SdhvrXWoEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setFoundationDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_SdhvrnWoEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Sdhvr3WoEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_SdhvsHWoEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_SdhvsXWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.phoneNumber" content="companyRegistrationRequestInput?.phoneNumber" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_SdhvsnWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Sdhvs3WoEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPhoneNumber">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_g3Q_sHWpEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_g3Q_sXWpEe21g5Lb2XJvjw" name="selectedEmployee" content="selectedEmployee" type="TYPE_VARIABLE" returnType="org.bonitasoft.engine.identity.User">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_hooLMHWpEe21g5Lb2XJvjw" name="selectedEmployee" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="org.bonitasoft.engine.identity.User"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_g3Q_snWpEe21g5Lb2XJvjw" name="newScript()" content="selectedEmployeeInput.userName" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.identity.User">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_mZbnwHWpEe21g5Lb2XJvjw" name="selectedEmployeeInput" type="COMPLEX">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_mZcO0HWpEe21g5Lb2XJvjw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_g3Q_s3WpEe21g5Lb2XJvjw" type="ASSIGNMENT"/>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_ZaPRo3WiEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_ZaPRpHWiEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_ZaPRpXWiEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_ZaPRp3WiEe21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_ZaPRpnWiEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_f_siunWiEe21g5Lb2XJvjw">
+            <targetForm xmi:type="expression:Expression" xmi:id="_V5FFwHWnEe21g5Lb2XJvjw" name="selectEmployeeForCompanyRequestForm" content="58efa0a9-1ed6-44a8-8a5f-cdd8c3299a10" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_f_siuXWiEe21g5Lb2XJvjw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_SdhvcHWoEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" dataReference="companyRegistrationRequest" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_SdhvcXWoEe21g5Lb2XJvjw" name="name" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_SdhvcnWoEe21g5Lb2XJvjw" name="username" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Sdhvc3WoEe21g5Lb2XJvjw" name="password" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_SdhvdHWoEe21g5Lb2XJvjw" name="email" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_SdhvdXWoEe21g5Lb2XJvjw" name="address" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_SdhvdnWoEe21g5Lb2XJvjw" name="persistenceId_string" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Sdhvd3WoEe21g5Lb2XJvjw" name="pib" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_SdhveHWoEe21g5Lb2XJvjw" name="foundationDate" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_SdhveXWoEe21g5Lb2XJvjw" name="phoneNumber" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_jokfIHWoEe21g5Lb2XJvjw" name="selectedEmployeeInput" type="COMPLEX">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_jokfIXWoEe21g5Lb2XJvjw"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_lQWVQHWoEe21g5Lb2XJvjw" name="username">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_lQWVQXWoEe21g5Lb2XJvjw"/>
+              </inputs>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_SdhvenWoEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.name != null" errorMessage="name is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_name">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Sdhve3WoEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.username != null" errorMessage="username is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_username">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_SdhvfHWoEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.password != null" errorMessage="password is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_password">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_SdhvfXWoEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.email != null" errorMessage="email is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_email">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_SdhvfnWoEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.address != null" errorMessage="Address is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_Sdhvf3WoEe21g5Lb2XJvjw" expression="!companyRegistrationRequestInput?.address || companyRegistrationRequestInput?.address?.persistenceId_string" errorMessage="Address must reference an existing instance with a persistenceId for CompanyRegistrationRequest" name="aggregation_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_SdhvgHWoEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.pib != null" errorMessage="pib is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_pib">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_SdhvgXWoEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.foundationDate != null" errorMessage="foundationDate is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_foundationDate">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_SdhvgnWoEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.phoneNumber != null" errorMessage="phoneNumber is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_phoneNumber">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_f_sivHWiEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:Task" xmi:id="_EtGakHWqEe21g5Lb2XJvjw" name="revizijaSef" outgoing="_lHXGcHWqEe21g5Lb2XJvjw" incoming="_7DI2sHWpEe21g5Lb2XJvjw" overrideActorsOfTheLane="false">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_7DDXInWpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_7DDXIXWpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_7DDXI3WpEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_vBxkWHWuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vBxkWXWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vBxkWnWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vBxkW3WuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.name" content="companyRegistrationRequestInput?.name" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vBxkXHWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vBxkXXWuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setName">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vBxkXnWuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vBxkX3WuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vBxkYHWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vBxkYXWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.username" content="companyRegistrationRequestInput?.username" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vBxkYnWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vBxkY3WuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setUsername">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vBxkZHWuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vBxkZXWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vBxkZnWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vBxkZ3WuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.password" content="companyRegistrationRequestInput?.password" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vBxkaHWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vBxkaXWuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPassword">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vBxkanWuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vBxka3WuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vBxkbHWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vBxkbXWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.email" content="companyRegistrationRequestInput?.email" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vBxkbnWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vBxkb3WuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setEmail">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vBxkcHWuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vBxkcXWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vBxkcnWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vBxkc3WuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.address" content="//Retrieve aggregated Address using its DAO and persistenceId&#xD;&#xA;def addressVar = addressDAO.findByPersistenceId(companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null)&#xD;&#xA;if (!addressVar) {&#xD;&#xA;&#x9;if (companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Address` with the persistence id &quot; + companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return null&#xD;&#xA;}&#xD;&#xA;return addressVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Address">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vBxkdHWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_vBxkdXWuEe21g5Lb2XJvjw" name="addressDAO" content="addressDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.AddressDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vBxkdnWuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setAddress">
+              <inputTypes>com.company.model.Address</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vBxkd3WuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vBxkeHWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vBxkeXWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vBxkenWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.pib" content="companyRegistrationRequestInput?.pib" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vBxke3WuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vBxkfHWuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPib">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vBxkfXWuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vBxkfnWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vBxkf3WuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vBxkgHWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.foundationDate" content="companyRegistrationRequestInput?.foundationDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vByLYHWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vByLYXWuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setFoundationDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vByLYnWuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vByLY3WuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vByLZHWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vByLZXWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.phoneNumber" content="companyRegistrationRequestInput?.phoneNumber" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vByLZnWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vByLZ3WuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPhoneNumber">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_vByLaHWuEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_vByLaXWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" content="companyRegistrationRequest" type="TYPE_VARIABLE" returnType="com.company.model.CompanyRegistrationRequest">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vByLanWuEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_vByLa3WuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput.rejectionReason" content="companyRegistrationRequestInput?.rejectionReason" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_vByLbHWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_vByLbXWuEe21g5Lb2XJvjw" type="JAVA_METHOD" expression="setRejectionReason">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_oebrwHWxEe21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_oebrwXWxEe21g5Lb2XJvjw" name="isRejected" content="isRejected" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_o-aMUHWxEe21g5Lb2XJvjw" name="isRejected" dataType="_XxRw7HWXEe21g5Lb2XJvjw"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_oebrwnWxEe21g5Lb2XJvjw" name="isRejectedInput" content="isRejectedInput" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_pVl9QHWxEe21g5Lb2XJvjw" name="isRejectedInput" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_pVl9QXWxEe21g5Lb2XJvjw"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_oebrw3WxEe21g5Lb2XJvjw" type="ASSIGNMENT"/>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_7DDXJHWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_7DDXJXWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_7DDXJnWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_7DDXKHWpEe21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_7DDXJ3WpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_EtHosnWqEe21g5Lb2XJvjw">
+            <targetForm xmi:type="expression:Expression" xmi:id="_FCMkAHWuEe21g5Lb2XJvjw" name="processCompanyForm" content="b500a3c6-17d5-4896-a2a3-0c36ded468fe" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          </formMapping>
+          <contract xmi:type="process:Contract" xmi:id="_EtHosXWqEe21g5Lb2XJvjw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_vBwWMHWuEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" dataReference="companyRegistrationRequest" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWMXWuEe21g5Lb2XJvjw" name="name" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWMnWuEe21g5Lb2XJvjw" name="username" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWM3WuEe21g5Lb2XJvjw" name="password" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWNHWuEe21g5Lb2XJvjw" name="email" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWNXWuEe21g5Lb2XJvjw" name="address" type="COMPLEX" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_vBwWNnWuEe21g5Lb2XJvjw" name="persistenceId_string" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWN3WuEe21g5Lb2XJvjw" name="pib" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWOHWuEe21g5Lb2XJvjw" name="foundationDate" type="LOCALDATE" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWOXWuEe21g5Lb2XJvjw" name="phoneNumber" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_vBwWOnWuEe21g5Lb2XJvjw" name="rejectionReason" createMode="false"/>
+            </inputs>
+            <inputs xmi:type="process:ContractInput" xmi:id="_vR-jgHWuEe21g5Lb2XJvjw" name="isRejectedInput" type="BOOLEAN">
+              <mapping xmi:type="process:ContractInputMapping" xmi:id="_vR-jgXWuEe21g5Lb2XJvjw"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBw9QHWuEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.name != null" errorMessage="name is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_name">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBxkUHWuEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.username != null" errorMessage="username is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_username">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBxkUXWuEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.password != null" errorMessage="password is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_password">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBxkUnWuEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.email != null" errorMessage="email is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_email">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBxkU3WuEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.address != null" errorMessage="Address is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBxkVHWuEe21g5Lb2XJvjw" expression="!companyRegistrationRequestInput?.address || companyRegistrationRequestInput?.address?.persistenceId_string" errorMessage="Address must reference an existing instance with a persistenceId for CompanyRegistrationRequest" name="aggregation_companyRegistrationRequestInput_address">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBxkVXWuEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.pib != null" errorMessage="pib is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_pib">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBxkVnWuEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.foundationDate != null" errorMessage="foundationDate is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_foundationDate">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_vBxkV3WuEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.phoneNumber != null" errorMessage="phoneNumber is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_phoneNumber">
+              <inputNames>companyRegistrationRequestInput</inputNames>
+            </constraints>
+          </contract>
+          <expectedDuration xmi:type="expression:Expression" xmi:id="_EtHotHWqEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:XORGateway" xmi:id="_Rdg8kHWrEe21g5Lb2XJvjw" name="Gateway2" outgoing="_43E84HWrEe21g5Lb2XJvjw _Npc_oHWsEe21g5Lb2XJvjw" incoming="_lHXGcHWqEe21g5Lb2XJvjw _u8DeMHWrEe21g5Lb2XJvjw _4d5YIHW8Ee21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_lHUqMnWqEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_lHUqMXWqEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_lHUqM3WqEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:XORGateway" xmi:id="_LzWZoHWsEe21g5Lb2XJvjw" name="Gateway3" outgoing="_XmFA0HWsEe21g5Lb2XJvjw" incoming="_Npc_oHWsEe21g5Lb2XJvjw _6JQZoHWvEe21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_DPtkonWsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_DPtkoXWsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_DPtko3WsEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ServiceTask" xmi:id="_5cs1oHWvEe21g5Lb2XJvjw" name="placanje" outgoing="_6JQZoHWvEe21g5Lb2XJvjw" incoming="_5dF3MHWvEe21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_5cvR4XWvEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_5cvR4HWvEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_5cvR4nWvEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_5cvR43WvEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_5cvR5HWvEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_5cvR5XWvEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_5cvR53WvEe21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_5cvR5nWvEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:ServiceTask" xmi:id="_OaaksHW7Ee21g5Lb2XJvjw" name="registracija" outgoing="_5dF3MHWvEe21g5Lb2XJvjw" incoming="_43E84HWrEe21g5Lb2XJvjw">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_43CgonWrEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_43CgoXWrEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_43Cgo3WrEe21g5Lb2XJvjw" name="" content="" returnTypeFixed="true"/>
+          <data xmi:type="process:JavaObjectData" xmi:id="_ukEToHW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company">
+            <defaultValue xmi:type="expression:Expression" xmi:id="_ukE6sHW5Ee21g5Lb2XJvjw" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Company"/>
+          </data>
+          <operations xmi:type="expression:Operation" xmi:id="_PuPoQHW0Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_PuPoQXW0Ee21g5Lb2XJvjw" name="newCompany" content="newCompany" type="TYPE_VARIABLE" returnType="com.company.model.Company">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_v6O1UHW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_PuPoQnW0Ee21g5Lb2XJvjw" name="newScript()" content="companyRegistrationRequest?.name" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="__q3OwHW0Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_PuPoQ3W0Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setName">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_AjeRwHW1Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_AjeRwXW1Ee21g5Lb2XJvjw" name="newCompany" content="newCompany" type="TYPE_VARIABLE" returnType="com.company.model.Company">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_wcM58HW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_AjeRwnW1Ee21g5Lb2XJvjw" name="newScript()" content="companyRegistrationRequest?.username" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ITAJQHW1Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_AjeRw3W1Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setUsername">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_InDtsHW1Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_InDtsXW1Ee21g5Lb2XJvjw" name="newCompany" content="newCompany" type="TYPE_VARIABLE" returnType="com.company.model.Company">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_w2DkYHW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_InDtsnW1Ee21g5Lb2XJvjw" name="newScript()" content="companyRegistrationRequest?.password" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_MdM40HW1Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_InDts3W1Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPassword">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_MsSdsHW1Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_MsSdsXW1Ee21g5Lb2XJvjw" name="newCompany" content="newCompany" type="TYPE_VARIABLE" returnType="com.company.model.Company">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_xK0TcHW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_MsSdsnW1Ee21g5Lb2XJvjw" name="newScript()" content="companyRegistrationRequest?.email" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_rrPMsHW2Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_MsSds3W1Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setEmail">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_QtisoHW1Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_QtisoXW1Ee21g5Lb2XJvjw" name="newCompany" content="newCompany" type="TYPE_VARIABLE" returnType="com.company.model.Company">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_xkND0HW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_QtisonW1Ee21g5Lb2XJvjw" name="newScript()" content="companyRegistrationRequest?.address" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Address">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_sb2KQHW2Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Qtiso3W1Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setAddress">
+              <inputTypes>com.company.model.Address</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Tq1kMHW1Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Tq1kMXW1Ee21g5Lb2XJvjw" name="newCompany" content="newCompany" type="TYPE_VARIABLE" returnType="com.company.model.Company">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_x3EVcHW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Tq1kMnW1Ee21g5Lb2XJvjw" name="newScript()" content="companyRegistrationRequest?.foundationDate" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_n39vYHW2Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Tq1kM3W1Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setFoundationDate">
+              <inputTypes>java.time.LocalDate</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_X4TqMHW1Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_X4TqMXW1Ee21g5Lb2XJvjw" name="newCompany" content="newCompany" type="TYPE_VARIABLE" returnType="com.company.model.Company">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_yJJj8HW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_X4TqMnW1Ee21g5Lb2XJvjw" name="newScript()" content="companyRegistrationRequest?.phoneNumber" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_u181MHW2Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_X4TqM3W1Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPhoneNumber">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_bDP8MHW1Ee21g5Lb2XJvjw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_bDP8MXW1Ee21g5Lb2XJvjw" name="newCompany" content="newCompany" type="TYPE_VARIABLE" returnType="com.company.model.Company">
+              <referencedElements xmi:type="process:JavaObjectData" xmi:id="_ycKmkHW5Ee21g5Lb2XJvjw" name="newCompany" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="com.company.model.Company"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_bDP8MnW1Ee21g5Lb2XJvjw" name="newScript()" content="companyRegistrationRequest?.pib" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_tvFTwHW2Ee21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_bDP8M3W1Ee21g5Lb2XJvjw" type="JAVA_METHOD" expression="setPib">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <loopCondition xmi:type="expression:Expression" xmi:id="_43CgpHWrEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+          <loopMaximum xmi:type="expression:Expression" xmi:id="_43CgpXWrEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_43CgpnWrEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
+          <iteratorExpression xmi:type="expression:Expression" xmi:id="_43CgqHWrEe21g5Lb2XJvjw" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
+          <completionCondition xmi:type="expression:Expression" xmi:id="_43Cgp3WrEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
+      </elements>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_A_z_kHWhEe21g5Lb2XJvjw" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_Inm3c3WhEe21g5Lb2XJvjw" name="initCompanyRegistrationRequest()" content="def companyRegistrationRequestVar = new com.company.model.CompanyRegistrationRequest()&#xD;&#xA;companyRegistrationRequestVar.name = companyRegistrationRequestInput?.name&#xD;&#xA;companyRegistrationRequestVar.username = companyRegistrationRequestInput?.username&#xD;&#xA;companyRegistrationRequestVar.password = companyRegistrationRequestInput?.password&#xD;&#xA;companyRegistrationRequestVar.email = companyRegistrationRequestInput?.email&#xD;&#xA;companyRegistrationRequestVar.address = {&#xD;&#xA;&#x9;//Retrieve aggregated Address using its DAO and persistenceId&#xD;&#xA;&#x9;def addressVar = addressDAO.findByPersistenceId(companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null)&#xD;&#xA;&#x9;if (!addressVar) {&#xD;&#xA;&#x9;&#x9;if (companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null) {&#xD;&#xA;&#x9;&#x9;&#x9;throw new IllegalArgumentException(&quot;The aggregated reference of type `Address` with the persistence id &quot; + companyRegistrationRequestInput?.address?.persistenceId_string?.trim() ? companyRegistrationRequestInput.address.persistenceId_string.toLong() : null + &quot; has not been found.&quot;)&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;return null&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;return addressVar}()&#xD;&#xA;companyRegistrationRequestVar.pib = companyRegistrationRequestInput?.pib&#xD;&#xA;companyRegistrationRequestVar.foundationDate = companyRegistrationRequestInput?.foundationDate&#xD;&#xA;companyRegistrationRequestVar.phoneNumber = companyRegistrationRequestInput?.phoneNumber&#xD;&#xA;return companyRegistrationRequestVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.CompanyRegistrationRequest">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_Inm3dHWhEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_Inm3dXWhEe21g5Lb2XJvjw" name="addressDAO" content="addressDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.company.model.AddressDAO" returnTypeFixed="true"/>
+        </defaultValue>
+      </data>
+      <data xmi:type="process:JavaObjectData" xmi:id="_DLskIHWoEe21g5Lb2XJvjw" name="selectedEmployee" dataType="_XxRw8nWXEe21g5Lb2XJvjw" className="org.bonitasoft.engine.identity.User">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_DLskIXWoEe21g5Lb2XJvjw" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.identity.User"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_cMy0oHWpEe21g5Lb2XJvjw" name="isRejected" dataType="_XxRw7HWXEe21g5Lb2XJvjw">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_cMy0oXWpEe21g5Lb2XJvjw" name="init_isRejected()" content="false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
+      </data>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_XxRw1HWXEe21g5Lb2XJvjw">
+        <targetForm xmi:type="expression:Expression" xmi:id="_XxRw1XWXEe21g5Lb2XJvjw" name="companyRegistrationForm" content="4db8d8ee-92fd-4cf6-8fef-e03a9f49d939" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </formMapping>
+      <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_XxRw1nWXEe21g5Lb2XJvjw">
+        <targetForm xmi:type="expression:Expression" xmi:id="_XxRw13WXEe21g5Lb2XJvjw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      </overviewFormMapping>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_ZaUKIHWiEe21g5Lb2XJvjw" target="_f_sisHWiEe21g5Lb2XJvjw" source="_XxRww3WXEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_ZaUKIXWiEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_ZaUKInWiEe21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_Q-uZsHWpEe21g5Lb2XJvjw" target="_VblmkHWpEe21g5Lb2XJvjw" source="_f_sisHWiEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Q-uZsXWpEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Q-uZsnWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_YUrTkHWpEe21g5Lb2XJvjw" target="_zxRyoHWpEe21g5Lb2XJvjw" source="_VblmkHWpEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_YUrTkXWpEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_YUrTknWpEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_7DI2sHWpEe21g5Lb2XJvjw" name="rejectedByEmployee" target="_EtGakHWqEe21g5Lb2XJvjw" source="_zxRyoHWpEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_7DI2sXWpEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_7DI2snWpEe21g5Lb2XJvjw" name="newScript()" content="isRejected == true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_9NnKMHWpEe21g5Lb2XJvjw" name="isRejected" dataType="_XxRw7HWXEe21g5Lb2XJvjw"/>
+        </condition>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_lHXGcHWqEe21g5Lb2XJvjw" target="_Rdg8kHWrEe21g5Lb2XJvjw" source="_EtGakHWqEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_lHXGcXWqEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_lHXGcnWqEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_u8DeMHWrEe21g5Lb2XJvjw" name="acceptedByEmployee" target="_Rdg8kHWrEe21g5Lb2XJvjw" source="_zxRyoHWpEe21g5Lb2XJvjw" isDefault="true">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_u8DeMXWrEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_u8DeMnWrEe21g5Lb2XJvjw" name="newScript()" content="isRejected  == true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_b0K8cHWtEe21g5Lb2XJvjw" name="isRejected" dataType="_XxRw7HWXEe21g5Lb2XJvjw"/>
+        </condition>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_43E84HWrEe21g5Lb2XJvjw" name="accepted" target="_OaaksHW7Ee21g5Lb2XJvjw" source="_Rdg8kHWrEe21g5Lb2XJvjw" isDefault="true">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_43E84XWrEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_43E84nWrEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_Npc_oHWsEe21g5Lb2XJvjw" name="rejected" target="_LzWZoHWsEe21g5Lb2XJvjw" source="_Rdg8kHWrEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_NpdmsHWsEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_NpdmsXWsEe21g5Lb2XJvjw" name="newScript()" content="isRejected == false" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_Sh0cwHWsEe21g5Lb2XJvjw" name="isRejected" dataType="_XxRw7HWXEe21g5Lb2XJvjw"/>
+        </condition>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_XmFA0HWsEe21g5Lb2XJvjw" target="_Xl-6MHWsEe21g5Lb2XJvjw" source="_LzWZoHWsEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_XmFA0XWsEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_XmFA0nWsEe21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_bVJ6oHWsEe21g5Lb2XJvjw" target="_bVBXwHWsEe21g5Lb2XJvjw" source="_Xl-6MHWsEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_bVKhsHWsEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_bVKhsXWsEe21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_5dF3MHWvEe21g5Lb2XJvjw" target="_5cs1oHWvEe21g5Lb2XJvjw" source="_OaaksHW7Ee21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_5dGeQHWvEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_5dGeQXWvEe21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_6JQZoHWvEe21g5Lb2XJvjw" target="_LzWZoHWsEe21g5Lb2XJvjw" source="_5cs1oHWvEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_6JRnwHWvEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_6JRnwXWvEe21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_gQE_sHWwEe21g5Lb2XJvjw" target="_pr9ysHWtEe21g5Lb2XJvjw" source="_i6rFEHWtEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_gQFmwHWwEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_gQFmwXWwEe21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_tlStUHWwEe21g5Lb2XJvjw" target="_fmHnQHWxEe21g5Lb2XJvjw" source="_pr9ysHWtEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_tlStUXWwEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_tlStUnWwEe21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_uhKDMHWxEe21g5Lb2XJvjw" target="_zxRyoHWpEe21g5Lb2XJvjw" source="_fmHnQHWxEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_uhKDMXWxEe21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_uhKDMnWxEe21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_5CTiMHW7Ee21g5Lb2XJvjw" target="_66X3EHW7Ee21g5Lb2XJvjw" source="_54uYYHWxEe21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_5CTiMXW7Ee21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_5CTiMnW7Ee21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_KdK2kHW8Ee21g5Lb2XJvjw" target="_bVBXwHWsEe21g5Lb2XJvjw" source="_DOkh4HW8Ee21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_KdLdoHW8Ee21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_KdLdoXW8Ee21g5Lb2XJvjw" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_4d5YIHW8Ee21g5Lb2XJvjw" target="_Rdg8kHWrEe21g5Lb2XJvjw" source="_66X3EHW7Ee21g5Lb2XJvjw">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_4d5_MHW8Ee21g5Lb2XJvjw"/>
+        <condition xmi:type="expression:Expression" xmi:id="_4d5_MXW8Ee21g5Lb2XJvjw" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <actors xmi:type="process:Actor" xmi:id="_XxRw23WXEe21g5Lb2XJvjw" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor"/>
+      <actors xmi:type="process:Actor" xmi:id="_alYTQHWbEe21g5Lb2XJvjw" name="Company"/>
+      <actors xmi:type="process:Actor" xmi:id="_9ZEUoHWbEe21g5Lb2XJvjw" name="Company Employee" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="__8yOkHWbEe21g5Lb2XJvjw" name="Agency Employee"/>
+      <actors xmi:type="process:Actor" xmi:id="_BryHAHWcEe21g5Lb2XJvjw" name="Company interaction chief"/>
+      <contract xmi:type="process:Contract" xmi:id="_XxRw3HWXEe21g5Lb2XJvjw">
+        <inputs xmi:type="process:ContractInput" xmi:id="_Inm3YHWhEe21g5Lb2XJvjw" name="companyRegistrationRequestInput" type="COMPLEX" dataReference="companyRegistrationRequest">
+          <inputs xmi:type="process:ContractInput" xmi:id="_Inm3YXWhEe21g5Lb2XJvjw" name="name"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_Inm3YnWhEe21g5Lb2XJvjw" name="username"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_Inm3Y3WhEe21g5Lb2XJvjw" name="password"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_Inm3ZHWhEe21g5Lb2XJvjw" name="email"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_Inm3ZXWhEe21g5Lb2XJvjw" name="address" type="COMPLEX">
+            <inputs xmi:type="process:ContractInput" xmi:id="_Inm3ZnWhEe21g5Lb2XJvjw" name="persistenceId_string"/>
+          </inputs>
+          <inputs xmi:type="process:ContractInput" xmi:id="_Inm3Z3WhEe21g5Lb2XJvjw" name="pib"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_Inm3aHWhEe21g5Lb2XJvjw" name="foundationDate" type="LOCALDATE"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_Inm3aXWhEe21g5Lb2XJvjw" name="phoneNumber"/>
+        </inputs>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3anWhEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.name != null" errorMessage="name is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_name">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3a3WhEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.username != null" errorMessage="username is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_username">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3bHWhEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.password != null" errorMessage="password is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_password">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3bXWhEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.email != null" errorMessage="email is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_email">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3bnWhEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.address != null" errorMessage="Address is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_address">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3b3WhEe21g5Lb2XJvjw" expression="!companyRegistrationRequestInput?.address || companyRegistrationRequestInput?.address?.persistenceId_string" errorMessage="Address must reference an existing instance with a persistenceId for CompanyRegistrationRequest" name="aggregation_companyRegistrationRequestInput_address">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3cHWhEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.pib != null" errorMessage="pib is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_pib">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3cXWhEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.foundationDate != null" errorMessage="foundationDate is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_foundationDate">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+        <constraints xmi:type="process:ContractConstraint" xmi:id="_Inm3cnWhEe21g5Lb2XJvjw" expression="companyRegistrationRequestInput?.phoneNumber != null" errorMessage="phoneNumber is mandatory for CompanyRegistrationRequest" name="mandatory_companyRegistrationRequestInput_phoneNumber">
+          <inputNames>companyRegistrationRequestInput</inputNames>
+        </constraints>
+      </contract>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_XxRw3XWXEe21g5Lb2XJvjw">
+        <name xmi:type="expression:Expression" xmi:id="_XxRw3nWXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_XxRw33WXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_XxRw4HWXEe21g5Lb2XJvjw">
+        <name xmi:type="expression:Expression" xmi:id="_XxRw4XWXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_XxRw4nWXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_XxRw43WXEe21g5Lb2XJvjw">
+        <name xmi:type="expression:Expression" xmi:id="_XxRw5HWXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_XxRw5XWXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_XxRw5nWXEe21g5Lb2XJvjw">
+        <name xmi:type="expression:Expression" xmi:id="_XxRw53WXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_XxRw6HWXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+      <searchIndexes xmi:type="process:SearchIndex" xmi:id="_XxRw6XWXEe21g5Lb2XJvjw">
+        <name xmi:type="expression:Expression" xmi:id="_XxRw6nWXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+        <value xmi:type="expression:Expression" xmi:id="_XxRw63WXEe21g5Lb2XJvjw" content="" returnTypeFixed="true"/>
+      </searchIndexes>
+    </elements>
+    <datatypes xmi:type="process:BooleanType" xmi:id="_XxRw7HWXEe21g5Lb2XJvjw" name="Boolean"/>
+    <datatypes xmi:type="process:DateType" xmi:id="_XxRw7XWXEe21g5Lb2XJvjw" name="Date"/>
+    <datatypes xmi:type="process:IntegerType" xmi:id="_XxRw7nWXEe21g5Lb2XJvjw" name="Integer"/>
+    <datatypes xmi:type="process:LongType" xmi:id="_XxRw73WXEe21g5Lb2XJvjw" name="Long"/>
+    <datatypes xmi:type="process:DoubleType" xmi:id="_XxRw8HWXEe21g5Lb2XJvjw" name="Double"/>
+    <datatypes xmi:type="process:StringType" xmi:id="_XxRw8XWXEe21g5Lb2XJvjw" name="Text"/>
+    <datatypes xmi:type="process:JavaType" xmi:id="_XxRw8nWXEe21g5Lb2XJvjw" name="Java_object"/>
+    <datatypes xmi:type="process:XMLType" xmi:id="_XxRw83WXEe21g5Lb2XJvjw" name="XML"/>
+    <datatypes xmi:type="process:BusinessObjectType" xmi:id="_XxRw9HWXEe21g5Lb2XJvjw" name="Business_Object"/>
+  </process:MainProcess>
+  <notation:Diagram xmi:id="_XxRw9XWXEe21g5Lb2XJvjw" type="Process" element="_XxRwwHWXEe21g5Lb2XJvjw" name="MyDiagram" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_XxRw9nWXEe21g5Lb2XJvjw" type="2007" element="_XxRwwXWXEe21g5Lb2XJvjw">
+      <children xmi:type="notation:DecorationNode" xmi:id="_XxRw93WXEe21g5Lb2XJvjw" type="5008"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_XxRw-HWXEe21g5Lb2XJvjw" type="7001">
+        <children xmi:type="notation:Node" xmi:id="_XxRw-XWXEe21g5Lb2XJvjw" type="3007" element="_XxRwwnWXEe21g5Lb2XJvjw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_XxRw-nWXEe21g5Lb2XJvjw" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_XxRw-3WXEe21g5Lb2XJvjw" type="7002">
+            <children xmi:type="notation:Shape" xmi:id="_XxRw_3WXEe21g5Lb2XJvjw" type="3002" element="_XxRww3WXEe21g5Lb2XJvjw" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_XxRxAHWXEe21g5Lb2XJvjw" type="5024">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_XxRxAXWXEe21g5Lb2XJvjw" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XxRxAnWXEe21g5Lb2XJvjw" x="86" y="186"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_XxRxA3WXEe21g5Lb2XJvjw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_XxRxBHWXEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_XxRxBXWXEe21g5Lb2XJvjw"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_XxRxBnWXEe21g5Lb2XJvjw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XxRxB3WXEe21g5Lb2XJvjw" x="53" y="10" width="1292" height="276"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_MoQ4IHWbEe21g5Lb2XJvjw" type="3007" element="_MoNNwHWbEe21g5Lb2XJvjw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_MoRfMHWbEe21g5Lb2XJvjw" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_MoRfMXWbEe21g5Lb2XJvjw" type="7002">
+            <children xmi:type="notation:Shape" xmi:id="_VblmnXWpEe21g5Lb2XJvjw" type="3005" element="_VblmkHWpEe21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_Vblmn3WpEe21g5Lb2XJvjw" type="5005"/>
+              <children xmi:type="notation:Shape" xmi:id="_i6vWgHWtEe21g5Lb2XJvjw" type="3043" element="_i6rFEHWtEe21g5Lb2XJvjw" fontName="Segoe UI">
+                <children xmi:type="notation:DecorationNode" xmi:id="_i6wkoHWtEe21g5Lb2XJvjw" type="5055">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_i6wkoXWtEe21g5Lb2XJvjw" y="5"/>
+                </children>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i6vWgXWtEe21g5Lb2XJvjw" x="-17" y="50"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VblmnnWpEe21g5Lb2XJvjw" x="278" y="54" width="164" height="82"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_zxTAw3WpEe21g5Lb2XJvjw" type="3008" element="_zxRyoHWpEe21g5Lb2XJvjw" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_zxTAxXWpEe21g5Lb2XJvjw" type="5026">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_zxTAxnWpEe21g5Lb2XJvjw" x="12" y="-10"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zxTAxHWpEe21g5Lb2XJvjw" x="542" y="47" width="43" height="43"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_XmBWcHWsEe21g5Lb2XJvjw" type="3027" element="_Xl-6MHWsEe21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_XmBWcnWsEe21g5Lb2XJvjw" type="5017"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XmBWcXWsEe21g5Lb2XJvjw" x="1046" y="308" width="145" height="72"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_bVDM8HWsEe21g5Lb2XJvjw" type="3003" element="_bVBXwHWsEe21g5Lb2XJvjw" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_bVDM8nWsEe21g5Lb2XJvjw" type="5025">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_bVDM83WsEe21g5Lb2XJvjw" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bVDM8XWsEe21g5Lb2XJvjw" x="1238" y="205"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_psBdEHWtEe21g5Lb2XJvjw" type="3027" element="_pr9ysHWtEe21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_psCEIHWtEe21g5Lb2XJvjw" type="5017"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_psBdEXWtEe21g5Lb2XJvjw" x="158" y="188" width="151" height="75"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_fmJccHWxEe21g5Lb2XJvjw" type="3005" element="_fmHnQHWxEe21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_fmKDgHWxEe21g5Lb2XJvjw" type="5005"/>
+              <children xmi:type="notation:Shape" xmi:id="_54wNkHWxEe21g5Lb2XJvjw" type="3043" element="_54uYYHWxEe21g5Lb2XJvjw" fontName="Segoe UI">
+                <children xmi:type="notation:DecorationNode" xmi:id="_54wNknWxEe21g5Lb2XJvjw" type="5055">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_54wNk3WxEe21g5Lb2XJvjw" x="-30" y="-7"/>
+                </children>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_54wNkXWxEe21g5Lb2XJvjw" x="18" y="50"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fmJccXWxEe21g5Lb2XJvjw" x="332" y="197" width="116" height="58"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_66ZsQHW7Ee21g5Lb2XJvjw" type="3005" element="_66X3EHW7Ee21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_66ZsQnW7Ee21g5Lb2XJvjw" type="5005"/>
+              <children xmi:type="notation:Shape" xmi:id="_DOm-IHW8Ee21g5Lb2XJvjw" type="3043" element="_DOkh4HW8Ee21g5Lb2XJvjw" fontName="Segoe UI">
+                <children xmi:type="notation:DecorationNode" xmi:id="_DOm-InW8Ee21g5Lb2XJvjw" type="5055">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_DOm-I3W8Ee21g5Lb2XJvjw" x="61" y="1"/>
+                </children>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DOm-IXW8Ee21g5Lb2XJvjw" x="132" y="9"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_66ZsQXW7Ee21g5Lb2XJvjw" x="320" y="309" width="140" height="70"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_MoQ4IXWbEe21g5Lb2XJvjw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_MoQ4InWbEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_MoQ4I3WbEe21g5Lb2XJvjw"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_MoRfMnWbEe21g5Lb2XJvjw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MoQ4JHWbEe21g5Lb2XJvjw" x="53" y="276" width="1426" height="439"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_NDvTMHWbEe21g5Lb2XJvjw" type="3007" element="_NDusIHWbEe21g5Lb2XJvjw">
+          <children xmi:type="notation:DecorationNode" xmi:id="_NDvTNXWbEe21g5Lb2XJvjw" type="5007"/>
+          <children xmi:type="notation:DecorationNode" xmi:id="_NDvTNnWbEe21g5Lb2XJvjw" type="7002">
+            <children xmi:type="notation:Shape" xmi:id="_f_tJwHWiEe21g5Lb2XJvjw" type="3005" element="_f_sisHWiEe21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_f_tJwnWiEe21g5Lb2XJvjw" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f_tJwXWiEe21g5Lb2XJvjw" x="53" y="55" width="166" height="83"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_EtIPwHWqEe21g5Lb2XJvjw" type="3005" element="_EtGakHWqEe21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_EtIPwnWqEe21g5Lb2XJvjw" type="5005"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EtIPwXWqEe21g5Lb2XJvjw" x="494" y="70" width="135" height="68"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_Rdhjo3WrEe21g5Lb2XJvjw" type="3008" element="_Rdg8kHWrEe21g5Lb2XJvjw" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_RdhjpXWrEe21g5Lb2XJvjw" type="5026">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_RdiKsHWrEe21g5Lb2XJvjw" x="-36" y="9"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RdhjpHWrEe21g5Lb2XJvjw" x="710" y="82" width="43" height="43"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_LzWZpHWsEe21g5Lb2XJvjw" type="3008" element="_LzWZoHWsEe21g5Lb2XJvjw" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_LzWZpnWsEe21g5Lb2XJvjw" type="5026">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_LzWZp3WsEe21g5Lb2XJvjw" x="12" y="24"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LzWZpXWsEe21g5Lb2XJvjw" x="1118" y="82" width="43" height="43"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_5cxuIHWvEe21g5Lb2XJvjw" type="3027" element="_5cs1oHWvEe21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_5czjUHWvEe21g5Lb2XJvjw" type="5017"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5cxuIXWvEe21g5Lb2XJvjw" x="974" y="82" width="116" height="58"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_Oaby13W7Ee21g5Lb2XJvjw" type="3027" element="_OaaksHW7Ee21g5Lb2XJvjw" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
+              <children xmi:type="notation:DecorationNode" xmi:id="_Oaby2XW7Ee21g5Lb2XJvjw" type="5017"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Oaby2HW7Ee21g5Lb2XJvjw" x="830" y="82" width="117" height="58"/>
+            </children>
+          </children>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_NDvTMXWbEe21g5Lb2XJvjw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_NDvTMnWbEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_NDvTM3WbEe21g5Lb2XJvjw"/>
+          <styles xmi:type="notation:FillStyle" xmi:id="_NDvTN3WbEe21g5Lb2XJvjw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NDvTNHWbEe21g5Lb2XJvjw" x="53" y="526" width="1292" height="298"/>
+        </children>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_XxRxCHWXEe21g5Lb2XJvjw"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_XxRxCXWXEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_XxRxCnWXEe21g5Lb2XJvjw"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_XxRxC3WXEe21g5Lb2XJvjw"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XxRxDHWXEe21g5Lb2XJvjw" width="1454" height="304"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_XxRxDXWXEe21g5Lb2XJvjw"/>
+    <edges xmi:type="notation:Connector" xmi:id="_ZaUKI3WiEe21g5Lb2XJvjw" type="4001" element="_ZaUKIHWiEe21g5Lb2XJvjw" source="_XxRw_3WXEe21g5Lb2XJvjw" target="_f_tJwHWiEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_ZaUKJnWiEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZaUKJ3WiEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_ZaUKJHWiEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZaUKJXWiEe21g5Lb2XJvjw" points="[14, 3, -45, -484]$[14, 446, -45, -41]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_Q-vAwHWpEe21g5Lb2XJvjw" type="4001" element="_Q-uZsHWpEe21g5Lb2XJvjw" source="_f_tJwHWiEe21g5Lb2XJvjw" target="_VblmnXWpEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_Q-vn0HWpEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Q-vn0XWpEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Q-vAwXWpEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Q-vAwnWpEe21g5Lb2XJvjw" points="[-2, -41, -226, 399]$[-2, -457, -226, -17]$[142, -457, -82, -17]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_YUrTk3WpEe21g5Lb2XJvjw" type="4001" element="_YUrTkHWpEe21g5Lb2XJvjw" source="_VblmnXWpEe21g5Lb2XJvjw" target="_zxTAw3WpEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_YUshsHWpEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YUshsXWpEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_YUrTlHWpEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YUrTlXWpEe21g5Lb2XJvjw" points="[0, -41, -203, -14]$[0, -89, -203, -62]$[203, -89, 0, -62]$[203, -48, 0, -21]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_7DL6AHWpEe21g5Lb2XJvjw" type="4001" element="_7DI2sHWpEe21g5Lb2XJvjw" source="_zxTAw3WpEe21g5Lb2XJvjw" target="_EtIPwHWqEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_7DMhEHWpEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7DMhEXWpEe21g5Lb2XJvjw" x="-170" y="-52"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_7DL6AXWpEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7DL6AnWpEe21g5Lb2XJvjw" points="[-4, 17, -4, -215]$[-4, 198, -4, -34]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_lHXGc3WqEe21g5Lb2XJvjw" type="4001" element="_lHXGcHWqEe21g5Lb2XJvjw" source="_EtIPwHWqEe21g5Lb2XJvjw" target="_Rdhjo3WrEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_lHXGdnWqEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_lHXGd3WqEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_lHXGdHWqEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lHXGdXWqEe21g5Lb2XJvjw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_u8HvoHWrEe21g5Lb2XJvjw" type="4001" element="_u8DeMHWrEe21g5Lb2XJvjw" source="_zxTAw3WpEe21g5Lb2XJvjw" target="_Rdhjo3WrEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_u8Hvo3WrEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_u8HvpHWrEe21g5Lb2XJvjw" x="-163" y="49"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_u8HvoXWrEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_u8HvonWrEe21g5Lb2XJvjw" points="[-6, -4, -155, -334]$[149, -4, 0, -334]$[149, 322, 0, -8]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u8I9wHWrEe21g5Lb2XJvjw" id="(1.0,0.7209302325581395)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u8I9wXWrEe21g5Lb2XJvjw" id="(0.5581395348837209,0.23255813953488372)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_43LqkHWrEe21g5Lb2XJvjw" type="4001" element="_43E84HWrEe21g5Lb2XJvjw" source="_Rdhjo3WrEe21g5Lb2XJvjw" target="_Oaby13W7Ee21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_43Lqk3WrEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_43LqlHWrEe21g5Lb2XJvjw" y="-18"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_43LqkXWrEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_43LqknWrEe21g5Lb2XJvjw" points="[22, 0, -231, -10]$[195, 0, -58, -10]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_NpgC8HWsEe21g5Lb2XJvjw" type="4001" element="_Npc_oHWsEe21g5Lb2XJvjw" source="_Rdhjo3WrEe21g5Lb2XJvjw" target="_LzWZpHWsEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_NpgqAHWsEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NpgqAXWsEe21g5Lb2XJvjw" x="-153" y="-14"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_NpgC8XWsEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NpgC8nWsEe21g5Lb2XJvjw" points="[-23, 12, -409, 20]$[-23, 107, -409, 115]$[386, 107, 0, 115]$[386, 14, 0, 22]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_NphREHWsEe21g5Lb2XJvjw" id="(1.0,0.6744186046511628)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_XmFn4HWsEe21g5Lb2XJvjw" type="4001" element="_XmFA0HWsEe21g5Lb2XJvjw" source="_LzWZpHWsEe21g5Lb2XJvjw" target="_XmBWcHWsEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_XmFn43WsEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_XmFn5HWsEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_XmFn4XWsEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XmFn4nWsEe21g5Lb2XJvjw" points="[0, -21, 15, 205]$[0, -190, 15, 36]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_bVLIwHWsEe21g5Lb2XJvjw" type="4001" element="_bVJ6oHWsEe21g5Lb2XJvjw" source="_XmBWcHWsEe21g5Lb2XJvjw" target="_bVDM8HWsEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_bVLIw3WsEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bVLv0HWsEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_bVLIwXWsEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bVLIwnWsEe21g5Lb2XJvjw" points="[73, -1, -56, 84]$[129, -1, 0, 84]$[129, -71, 0, 14]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_5dHsYHWvEe21g5Lb2XJvjw" type="4001" element="_5dF3MHWvEe21g5Lb2XJvjw" source="_Oaby13W7Ee21g5Lb2XJvjw" target="_5cxuIHWvEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_5dI6gHWvEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5dI6gXWvEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_5dHsYXWvEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5dHsYnWvEe21g5Lb2XJvjw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_6JTc8HWvEe21g5Lb2XJvjw" type="4001" element="_6JQZoHWvEe21g5Lb2XJvjw" source="_5cxuIHWvEe21g5Lb2XJvjw" target="_LzWZpHWsEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_6JUEAHWvEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6JUEAXWvEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_6JTc8XWvEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6JTc8nWvEe21g5Lb2XJvjw" points="[0, -8, -49, 4]$[31, -8, -18, 4]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6JZjkHWvEe21g5Lb2XJvjw" id="(1.0,0.58)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_gQLGUHWwEe21g5Lb2XJvjw" type="4001" element="_gQE_sHWwEe21g5Lb2XJvjw" source="_i6vWgHWtEe21g5Lb2XJvjw" target="_psBdEHWtEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_gQLtYHWwEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gQLtYXWwEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_gQLGUXWwEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gQLGUnWwEe21g5Lb2XJvjw" points="[-25, -15, 109, -65]$[-104, -15, 30, -65]$[-104, 45, 30, -5]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gQRM8HWwEe21g5Lb2XJvjw" id="(1.0,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gQR0AHWwEe21g5Lb2XJvjw" id="(0.08609271523178808,0.06666666666666667)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_tlTUYHWwEe21g5Lb2XJvjw" type="4001" element="_tlStUHWwEe21g5Lb2XJvjw" source="_psBdEHWtEe21g5Lb2XJvjw" target="_fmJccHWxEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_tlTUY3WwEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tlTUZHWwEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_tlTUYXWwEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tlTUYnWwEe21g5Lb2XJvjw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_uhKDM3WxEe21g5Lb2XJvjw" type="4001" element="_uhKDMHWxEe21g5Lb2XJvjw" source="_fmJccHWxEe21g5Lb2XJvjw" target="_zxTAw3WpEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_uhKDNnWxEe21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_uhKDN3WxEe21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_uhKDNHWxEe21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uhKDNXWxEe21g5Lb2XJvjw" points="[0, 0, -115, 147]$[46, 0, -69, 147]$[46, -147, -69, 0]$[94, -147, -21, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uhLRUHWxEe21g5Lb2XJvjw" id="(1.0,0.46551724137931033)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_5CUwUHW7Ee21g5Lb2XJvjw" type="4001" element="_5CTiMHW7Ee21g5Lb2XJvjw" source="_54wNkHWxEe21g5Lb2XJvjw" target="_66ZsQHW7Ee21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_5CUwU3W7Ee21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5CUwVHW7Ee21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_5CUwUXW7Ee21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5CUwUnW7Ee21g5Lb2XJvjw" points="[0, 0, -15, -81]$[0, 46, -15, -35]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5CWlgHW7Ee21g5Lb2XJvjw" id="(1.0,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_KdMEsHW8Ee21g5Lb2XJvjw" type="4001" element="_KdK2kHW8Ee21g5Lb2XJvjw" source="_DOm-IHW8Ee21g5Lb2XJvjw" target="_bVDM8HWsEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_KdMEs3W8Ee21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_KdMEtHW8Ee21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_KdMEsXW8Ee21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KdMEsnW8Ee21g5Lb2XJvjw" points="[-13, -25, -543, 7]$[-13, -33, -543, -1]$[515, -33, -15, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KdMrwHW8Ee21g5Lb2XJvjw" id="(1.0,1.0)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_4d6mQHW8Ee21g5Lb2XJvjw" type="4001" element="_4d5YIHW8Ee21g5Lb2XJvjw" source="_66ZsQHW7Ee21g5Lb2XJvjw" target="_Rdhjo3WrEe21g5Lb2XJvjw" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_4d6mQ3W8Ee21g5Lb2XJvjw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4d6mRHW8Ee21g5Lb2XJvjw" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_4d6mQXW8Ee21g5Lb2XJvjw" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4d6mQnW8Ee21g5Lb2XJvjw" points="[0, 0, -258, -187]$[202, 0, -56, -187]$[202, 205, -56, 18]$[250, 205, -8, 18]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4d9CgHW8Ee21g5Lb2XJvjw" id="(1.0,0.4)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4d9CgXW8Ee21g5Lb2XJvjw" id="(0.18604651162790697,0.06976744186046512)"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
