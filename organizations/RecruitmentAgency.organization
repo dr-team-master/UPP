@@ -133,6 +133,15 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="company.employee1">
+      <firstName>Company</firstName>
+      <lastName>Employee 1</lastName>
+      <manager>company.chief</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Employee">
@@ -255,6 +264,11 @@
       <userName>client2</userName>
       <roleName>User</roleName>
       <groupName>Agency</groupName>
+    </membership>
+    <membership>
+      <userName>company.employee1</userName>
+      <roleName>Employee</roleName>
+      <groupName>Company</groupName>
     </membership>
   </memberships>
 </organization:Organization>
