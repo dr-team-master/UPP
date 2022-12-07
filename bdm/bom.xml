@@ -85,12 +85,19 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.EmploymentRequest">
             <fields>
+                <relationField type="COMPOSITION" reference="com.company.model.EmploymentRequestItem" fetchType="EAGER" name="items" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.EmploymentRequestItem">
+            <fields>
                 <field type="INTEGER" length="255" name="numberOfEmployees" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Education" fetchType="EAGER" name="education" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="education" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="employeePosition" nullable="false" collection="false"/>
                 <field type="STRING" length="255" name="experience" nullable="false" collection="false"/>
                 <field type="DOUBLE" length="255" name="employmentBudget" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="agencyEmployee" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
