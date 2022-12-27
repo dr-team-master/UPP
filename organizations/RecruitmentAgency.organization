@@ -120,16 +120,24 @@
     <user userName="client1">
       <firstName>Client</firstName>
       <lastName>1</lastName>
-      <personalData/>
-      <professionalData/>
+      <personalData>
+        <email>client1@company.com</email>
+      </personalData>
+      <professionalData>
+        <email>client1@company.com</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
     <user userName="client2">
       <firstName>Client</firstName>
       <lastName>2</lastName>
-      <personalData/>
-      <professionalData/>
+      <personalData>
+        <email>client2@company.com</email>
+      </personalData>
+      <professionalData>
+        <email>client2@company.com</email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>

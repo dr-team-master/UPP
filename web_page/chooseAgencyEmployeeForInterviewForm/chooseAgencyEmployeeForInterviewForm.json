@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "chooseAgencyEmployeeForInterviewForm",
   "name" : "chooseAgencyEmployeeForInterviewForm",
-  "lastUpdate" : 1670361753671,
+  "lastUpdate" : 1672097840213,
   "rows" : [
     [
       {
@@ -230,7 +230,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{premiumHiringApplication.candidate}}"
+                          "value" : "{{candidate[0].firstname}} {{candidate[0].lastname}} | {{candidate[0].userName}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -239,6 +239,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
                         }
                       },
                       "reference" : "07595fc8-5c32-4374-b441-f3c917c56afd",
@@ -369,13 +381,16 @@
                                 "type" : "interpolation"
                               },
                               "availableValues" : {
-                                "type" : "constant"
+                                "type" : "expression",
+                                "value" : "possibleAgencyEmployees"
                               },
                               "displayedKey" : {
-                                "type" : "constant"
+                                "type" : "constant",
+                                "value" : "userName"
                               },
                               "returnedKey" : {
-                                "type" : "constant"
+                                "type" : "constant",
+                                "value" : "id"
                               },
                               "value" : {
                                 "type" : "variable",
@@ -652,6 +667,20 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "candidate" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=id={{premiumHiringApplication.candidate}}"
+      ],
+      "exposed" : false
+    },
+    "possibleAgencyEmployees" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=group_id=103"
       ],
       "exposed" : false
     }

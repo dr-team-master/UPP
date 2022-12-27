@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "enterOptionalDatesForm",
   "name" : "enterOptionalDatesForm",
-  "lastUpdate" : 1670361668792,
+  "lastUpdate" : 1672099658445,
   "rows" : [
     [
       {
@@ -230,7 +230,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{premiumHiringApplication.candidate}}"
+                          "value" : "{{candidate[0].firstname}} {{candidate[0].lastname}} | \n{{candidate[0].userName}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -239,6 +239,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
                         }
                       },
                       "reference" : "4164f4c1-9e2d-4a09-9a37-55e8658dcd97",
@@ -351,7 +363,7 @@
                               },
                               "text" : {
                                 "type" : "interpolation",
-                                "value" : "{{$item.hrMember}}"
+                                "value" : "{{hrMember[0].firstname}} {{hrMember[0].lastname}} | \n{{hrMember[0].userName}}"
                               },
                               "alignment" : {
                                 "type" : "constant",
@@ -360,6 +372,18 @@
                               "dimension" : {
                                 "type" : "constant",
                                 "value" : 12
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 4
                               }
                             },
                             "reference" : "07036384-267d-40f4-8bd4-507751c403d0",
@@ -472,7 +496,7 @@
                                     },
                                     "text" : {
                                       "type" : "interpolation",
-                                      "value" : "{{$item.projectTeamMembers}}"
+                                      "value" : "{{projectTeamMembers[0].firstname}} {{projectTeamMembers[0].lastname}} | \n{{projectTeamMembers[0].userName}}"
                                     },
                                     "alignment" : {
                                       "type" : "constant",
@@ -481,6 +505,18 @@
                                     "dimension" : {
                                       "type" : "constant",
                                       "value" : 12
+                                    },
+                                    "allowHTML" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "labelPosition" : {
+                                      "type" : "constant",
+                                      "value" : "top"
+                                    },
+                                    "labelWidth" : {
+                                      "type" : "constant",
+                                      "value" : 4
                                     }
                                   },
                                   "reference" : "5cbb1257-a8ea-4c29-bade-a02ff0015b90",
@@ -490,55 +526,6 @@
                                 }
                               ]
                             ]
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "md" : 12,
-                              "sm" : 12,
-                              "xs" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "allowHtml" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "labelHidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "hidden" : {
-                                "type" : "expression",
-                                "value" : "!$item.agencyEmployee"
-                              },
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Agency Employee"
-                              },
-                              "text" : {
-                                "type" : "interpolation",
-                                "value" : "{{$item.agencyEmployee}}"
-                              },
-                              "alignment" : {
-                                "type" : "constant",
-                                "value" : "left"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
-                              }
-                            },
-                            "reference" : "8e2bc5e2-11d9-4443-b17a-ea342231fa98",
-                            "hasValidationError" : false,
-                            "id" : "pbText",
-                            "description" : ""
                           }
                         ],
                         [
@@ -681,6 +668,10 @@
                                     "value" : {
                                       "type" : "variable",
                                       "value" : "$item"
+                                    },
+                                    "allowHTML" : {
+                                      "type" : "constant",
+                                      "value" : false
                                     }
                                   },
                                   "reference" : "11cb7e7e-42f3-43e7-802e-8986e2ac1649",
@@ -783,7 +774,7 @@
                               },
                               "hidden" : {
                                 "type" : "expression",
-                                "value" : "premiumHiringApplication.interview.optionalDates === 3"
+                                "value" : "$item.optionalDates === 3"
                               },
                               "cssClasses" : {
                                 "type" : "constant",
@@ -938,7 +929,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid"
+                    "value" : "$form.$invalid || premiumHiringApplication_interview.optionalDates.length !== 3"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -947,6 +938,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "21c8e9e0-5b4e-4caf-b508-0dd389f01e68",
@@ -1112,6 +1124,27 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "candidate" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=id={{premiumHiringApplication.candidate}}"
+      ],
+      "exposed" : false
+    },
+    "hrMember" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=id={{$item.hrMember}}"
+      ],
+      "exposed" : false
+    },
+    "projectTeamMembers" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=100&f=id={{$item.projectTeamMembers}}"
       ],
       "exposed" : false
     }

@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "chooseCompaniesForSuggestionForm1",
   "name" : "chooseCompaniesForSuggestionForm1",
-  "lastUpdate" : 1670356811022,
+  "lastUpdate" : 1671997564062,
   "rows" : [
     [
       {
@@ -400,61 +400,70 @@
                           {
                             "type" : "component",
                             "dimension" : {
-                              "md" : 12,
-                              "sm" : 12,
                               "xs" : 12,
+                              "sm" : 12,
+                              "md" : 12,
                               "lg" : 12
                             },
                             "propertyValues" : {
-                              "labelHidden" : {
+                              "cssClasses" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : ""
                               },
                               "hidden" : {
                                 "type" : "constant",
                                 "value" : false
                               },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Select Company"
+                              },
                               "labelPosition" : {
                                 "type" : "constant",
                                 "value" : "top"
                               },
-                              "cssClasses" : {
+                              "labelWidth" : {
                                 "type" : "constant",
-                                "value" : ""
+                                "value" : 4
+                              },
+                              "placeholder" : {
+                                "type" : "interpolation",
+                                "value" : "Select an option"
                               },
                               "availableValues" : {
                                 "type" : "expression",
                                 "value" : "company_query"
                               },
-                              "labelWidth" : {
-                                "type" : "constant",
-                                "value" : 1
+                              "displayedKey" : {
+                                "type" : "constant"
                               },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Recommended Companies"
-                              },
-                              "placeholder" : {
-                                "type" : "constant",
-                                "value" : "Select a Recommended Companies"
-                              },
-                              "dimension" : {
-                                "type" : "constant",
-                                "value" : 12
+                              "returnedKey" : {
+                                "type" : "constant"
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "$item"
-                              },
-                              "required" : {
-                                "type" : "constant",
-                                "value" : true
+                                "value" : "$item.recommendedCompanies"
                               }
                             },
-                            "reference" : "5b2ce126-da6e-4cac-812d-2e325fd2ea8b",
+                            "reference" : "a6bf0bcf-e838-423e-88ea-4180f5bf358c",
                             "hasValidationError" : false,
-                            "id" : "pbSelect",
-                            "description" : ""
+                            "id" : "pbSelect"
                           }
                         ],
                         [
@@ -527,6 +536,30 @@
                               "dimension" : {
                                 "type" : "constant",
                                 "value" : 12
+                              },
+                              "assign" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "url" : {
+                                "type" : "interpolation"
+                              },
+                              "responseStatusCode" : {
+                                "type" : "variable"
+                              },
+                              "dataFromSuccess" : {
+                                "type" : "variable"
+                              },
+                              "closeOnSuccess" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "dataFromError" : {
+                                "type" : "variable"
+                              },
+                              "modalId" : {
+                                "type" : "constant",
+                                "value" : ""
                               }
                             },
                             "reference" : "acbb175c-e06c-4340-a03a-3e81790dcb15",
@@ -706,7 +739,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid"
+                    "value" : "$form.$invalid || premiumHiringApplication.recommendedCompanies.length !== 3"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -715,6 +748,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "3e54207f-8985-4548-b017-52a8beb35e12",

@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "premiumHiringApplyingForm",
-  "name" : "premiumHiringApplyingForm",
-  "lastUpdate" : 1671994170288,
+  "id" : "checkCVAndLetterForm",
+  "name" : "checkCVAndLetterForm",
+  "lastUpdate" : 1672096233323,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "616c3b82-d254-40cb-ba6d-244b3c096573",
+        "reference" : "d0f1a15b-c8c3-42e1-b437-380e092d9e80",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "31424588-32c0-4ef4-8a33-ea7e23067a9e",
+              "reference" : "f9e150af-db21-4d14-9c81-fa2c29f54609",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -72,7 +72,7 @@
                 },
                 "labelHidden" : {
                   "type" : "constant",
-                  "value" : false
+                  "value" : true
                 },
                 "hidden" : {
                   "type" : "constant",
@@ -87,7 +87,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "<h2>Terms and Conditions</h2>\n<p>Welcome to Recruitment Agency!</p>\n\n<p>These terms and conditions outline the rules and regulations for the use of Company Recruitment Agency, located at recruitmentagency.com.</p>\n\n<p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Recruitment Agency if you do not agree to take all of the terms and conditions stated on this page.</p>\n\n<p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: “Client”, “You” and “Your” refers to you, the person log on this website and compliant to the Company's terms and conditions. “The Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our Company. “Party”, “Parties”, or “Us”, refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>\n\n<b>Cookies</b>\n<p>We employ the use of cookies. By accessing Website Name, you agreed to use cookies in agreement with the Company Name's Privacy Policy.</p>\n\n<p>Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>\n\n<b>License</b>\n<p>Unless otherwise stated, Company Name and/or its licensors own the intellectual property rights for all material on Website Name. All intellectual property rights are reserved. You may access this from Website Name for your own personal use subjected to restrictions set in these terms and conditions.</p>"
+                  "value" : "{{ task.displayDescription }}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -96,20 +96,9 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
-                },
-                "allowHTML" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "labelPosition" : {
-                  "type" : "constant",
-                  "value" : "top"
-                },
-                "labelWidth" : {
-                  "type" : "constant"
                 }
               },
-              "reference" : "fa076831-d570-4ad9-a2e1-0065a955f7b9",
+              "reference" : "114b4f04-8857-4ec7-9007-b41604795975",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -124,8 +113,17 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
-        "reference" : "62868c8e-1e11-4b1b-a92d-66992f60c061",
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "851c1df0-56c2-4e09-bfdb-ca65c7a75c4e",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -134,7 +132,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "7f6bc38a-1b02-4047-a240-d505a4bddcd7",
+          "reference" : "6e8b5168-f8db-4e7b-81e0-2027abc9560f",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -166,7 +164,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Agree"
+                    "value" : "Are Cv And Letter Good"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -174,18 +172,10 @@
                   },
                   "value" : {
                     "type" : "variable",
-                    "value" : "formInput.agree"
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
+                    "value" : "formInput.areCvAndLetterGood"
                   }
                 },
-                "reference" : "921a29c5-0712-4ed3-a681-61007d4d9c72",
+                "reference" : "e7fb4743-b0c7-400c-a34b-38bf1607d4b8",
                 "hasValidationError" : false,
                 "id" : "pbCheckbox",
                 "description" : ""
@@ -255,7 +245,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "formInput.agree == false"
+                    "value" : "$form.$invalid"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -264,30 +254,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable"
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable"
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "f615a2cf-59af-420a-894d-2be0f22cfccb",
+                "reference" : "9852a0df-d8df-4d4f-b706-e0908d2c73f0",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -339,7 +308,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "e9ca50dd-26c6-4d67-ab2f-3a56031e2616",
+                "reference" : "537420ca-2eb6-4639-82b2-c9d135ba4559",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -352,14 +321,14 @@
   ],
   "assets" : [
     {
-      "id" : "7a7cfb14-a65c-4e03-8bbb-7dbcfe5e6308",
+      "id" : "c67eef01-a7e6-4728-8b2d-53365f4a9bbc",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "0cf2f880-454b-4ffb-a096-12982006e013",
+      "id" : "4d038344-5292-4eed-9174-c58bf77556f8",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
@@ -379,7 +348,7 @@
       "type" : "json",
       "value" : [
         "{\r",
-        "  \"agree\" : false\r",
+        "  \"areCvAndLetterGood\" : false\r",
         "}"
       ],
       "exposed" : false
@@ -403,7 +372,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tagree: $data.formInput.agree",
+        "\tareCvAndLetterGood: $data.formInput.areCvAndLetterGood",
         "}"
       ],
       "exposed" : false
@@ -424,7 +393,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "ddf068ff-68c5-4845-8c50-2646784adbcd",
+  "uuid" : "df6db8c6-54e6-4274-a20f-686a31343c43",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

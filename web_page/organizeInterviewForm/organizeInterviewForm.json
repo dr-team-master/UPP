@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "organizeInterviewForm",
   "name" : "organizeInterviewForm",
-  "lastUpdate" : 1670367560456,
+  "lastUpdate" : 1672096754396,
   "rows" : [
     [
       {
@@ -244,7 +244,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid"
+                    "value" : "$form.$invalid || !formInput.orgnize"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -253,6 +253,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "38607d2f-4645-4738-9222-e38720fdfa1a",

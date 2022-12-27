@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "chooseAgencyEmployeeForm",
-  "name" : "chooseAgencyEmployeeForm",
-  "lastUpdate" : 1672098604865,
+  "id" : "addCVAndLetterForm",
+  "name" : "addCVAndLetterForm",
+  "lastUpdate" : 1672087977293,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "dbaa85d2-a6d6-459f-afd0-53d6f587a96b",
+        "reference" : "7d095912-5d1f-4c44-b7cd-87016f0ca115",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "91ecfa81-6ab3-439e-bb7b-eb169db39b4d",
+              "reference" : "51362efd-4cca-482b-a59b-85b376d6b2b4",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "14df9330-2140-49c9-b975-72f64c79a6f5",
+              "reference" : "a6daad59-429b-448c-ae48-b3c526b62192",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "a8e6b318-0ba6-45c8-83e2-f9f9cc808926",
+        "reference" : "a04078d3-c336-4a05-8806-918a563ed7a1",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "63f0097f-e899-4fca-a968-2f61f155fc9f",
+          "reference" : "a5f193d7-03ab-4470-baf5-84a10349dbbd",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -131,206 +131,122 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
                   "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 4"
-                  },
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
                   },
-                  "text" : {
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
                     "type" : "interpolation",
-                    "value" : "Premium Hiring Application"
+                    "value" : "Upload CV"
                   },
-                  "alignment" : {
+                  "labelPosition" : {
                     "type" : "constant",
-                    "value" : "left"
+                    "value" : "top"
                   },
-                  "dimension" : {
+                  "labelWidth" : {
                     "type" : "constant",
-                    "value" : 12
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "../API/formFileUpload"
+                  },
+                  "value" : {
+                    "type" : "variable"
+                  },
+                  "errorContent" : {
+                    "type" : "variable"
                   }
                 },
-                "reference" : "80631576-ba74-42d9-8e37-240463d18d87",
+                "reference" : "5299b513-385e-414e-b9d9-cedcce17b603",
                 "hasValidationError" : false,
-                "id" : "pbTitle",
-                "description" : ""
+                "id" : "pbUpload"
               }
             ],
             [
               {
-                "type" : "container",
+                "type" : "component",
                 "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
                   "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
                   "lg" : 12
                 },
                 "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable"
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "cssClasses" : {
+                  "required" : {
                     "type" : "constant",
-                    "value" : ""
+                    "value" : false
                   },
-                  "dimension" : {
+                  "allowHTML" : {
                     "type" : "constant",
-                    "value" : 12
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Upload cover letter"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
+                  "url" : {
+                    "type" : "constant",
+                    "value" : "../API/formFileUpload"
+                  },
+                  "value" : {
+                    "type" : "variable"
+                  },
+                  "errorContent" : {
+                    "type" : "variable"
                   }
                 },
-                "reference" : "3db3c36a-df4e-4b93-80df-84f9e28ea180",
+                "reference" : "dd9de616-4e22-48c2-8b26-0d2d2334b96d",
                 "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!premiumHiringApplication.candidate"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Candidate"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{candidate[0].firstname}} {{candidate[0].lastname}} | {{candidate[0].userName}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        }
-                      },
-                      "reference" : "6adad138-4219-4fc7-838b-1c47792cfbbd",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Agency Employee"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "placeholder" : {
-                          "type" : "interpolation"
-                        },
-                        "availableValues" : {
-                          "type" : "expression",
-                          "value" : "possibleAgencyEmployees"
-                        },
-                        "displayedKey" : {
-                          "type" : "constant",
-                          "value" : "userName"
-                        },
-                        "returnedKey" : {
-                          "type" : "constant",
-                          "value" : "id"
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "premiumHiringApplication.agencyEmployee"
-                        }
-                      },
-                      "reference" : "bcec1c15-6fc7-4054-9f77-389b4efcb739",
-                      "hasValidationError" : false,
-                      "id" : "pbSelect"
-                    }
-                  ]
-                ]
+                "id" : "pbUpload"
               }
             ],
             [
@@ -397,7 +313,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid || !premiumHiringApplication.agencyEmployee"
+                    "value" : "$form.$invalid"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -429,7 +345,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "8a084266-a30e-4fd8-a275-649858af6aec",
+                "reference" : "5d22e589-f6d5-429a-bf32-d253d65f54c5",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -481,7 +397,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "ad07f66a-a4b9-44b6-b37b-a9f60fc62a59",
+                "reference" : "588995c0-9ae5-4d0c-803e-d6eb6e04b71f",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -494,14 +410,14 @@
   ],
   "assets" : [
     {
-      "id" : "938ac4aa-193b-43f9-9009-09e7ee56550e",
+      "id" : "5e11af3e-e1af-4c05-b540-95cdeb26fb36",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "f83e4f81-d9dc-4e8c-b5af-4493a00a1cd1",
+      "id" : "e4b38d3c-6c7e-4a78-9836-5bbaee390918",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -514,13 +430,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
-    "premiumHiringApplication_recommendedCompanies" : {
-      "type" : "url",
-      "value" : [
-        "{{premiumHiringApplication|lazyRef:'recommendedCompanies'}}"
       ],
       "exposed" : false
     },
@@ -542,17 +451,8 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.premiumHiringApplication && $data.premiumHiringApplication_recommendedCompanies && $data.premiumHiringApplication_selectedCompany && $data.premiumHiringApplication_interview ){",
-        "\t//attach lazy references variables to parent variables",
-        "\t$data.premiumHiringApplication.recommendedCompanies = $data.premiumHiringApplication_recommendedCompanies;",
-        "\t$data.premiumHiringApplication.selectedCompany = $data.premiumHiringApplication_selectedCompany;",
-        "\t$data.premiumHiringApplication.interview = $data.premiumHiringApplication_interview;",
-        "\treturn {",
-        "\t\t//map premiumHiringApplication variable to expected task contract input",
-        "\t\tpremiumHiringApplicationInput: {",
-        "\t\t\tagencyEmployee: $data.premiumHiringApplication.agencyEmployee !== undefined ? $data.premiumHiringApplication.agencyEmployee : null",
-        "\t\t}",
-        "\t}",
+        "return {",
+        "",
         "}"
       ],
       "exposed" : false
@@ -564,51 +464,16 @@
       ],
       "exposed" : false
     },
-    "premiumHiringApplication" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.premiumHiringApplication_ref.link}}"
-      ],
-      "exposed" : false
-    },
-    "premiumHiringApplication_selectedCompany" : {
-      "type" : "url",
-      "value" : [
-        "{{premiumHiringApplication|lazyRef:'selectedCompany'}}"
-      ],
-      "exposed" : false
-    },
-    "premiumHiringApplication_interview" : {
-      "type" : "url",
-      "value" : [
-        "{{premiumHiringApplication|lazyRef:'interview'}}"
-      ],
-      "exposed" : false
-    },
     "taskId" : {
       "type" : "urlparameter",
       "value" : [
         "id"
       ],
       "exposed" : false
-    },
-    "possibleAgencyEmployees" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user?p=0&c=100&f=group_id=103"
-      ],
-      "exposed" : false
-    },
-    "candidate" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user?p=0&c=100&f=id={{premiumHiringApplication.candidate}}"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "4e4dd6a2-e087-4294-b0fb-0345640717db",
+  "uuid" : "07ec09d3-bf71-4309-bd2b-45e45532f6a7",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

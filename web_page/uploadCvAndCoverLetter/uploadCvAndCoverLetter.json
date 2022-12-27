@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.3",
-  "id" : "chooseAgencyEmployeeForm",
-  "name" : "chooseAgencyEmployeeForm",
-  "lastUpdate" : 1672098604865,
+  "id" : "uploadCvAndCoverLetter",
+  "name" : "uploadCvAndCoverLetter",
+  "lastUpdate" : 1672088578736,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "dbaa85d2-a6d6-459f-afd0-53d6f587a96b",
+        "reference" : "c2b25f04-bf03-4ebe-b6bb-a814ca21131e",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -39,7 +39,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayName }}"
+                  "value" : "Upload documents"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -48,59 +48,15 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
-                }
-              },
-              "reference" : "91ecfa81-6ab3-439e-bb7b-eb169db39b4d",
-              "hasValidationError" : false,
-              "id" : "pbTitle",
-              "description" : ""
-            }
-          ],
-          [
-            {
-              "type" : "component",
-              "dimension" : {
-                "md" : 12,
-                "sm" : 12,
-                "xs" : 12,
-                "lg" : 12
-              },
-              "propertyValues" : {
-                "allowHtml" : {
-                  "type" : "constant",
-                  "value" : true
                 },
-                "labelHidden" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "hidden" : {
+                "allowHTML" : {
                   "type" : "constant",
                   "value" : false
-                },
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "label" : {
-                  "type" : "interpolation"
-                },
-                "text" : {
-                  "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
-                },
-                "alignment" : {
-                  "type" : "constant",
-                  "value" : "left"
-                },
-                "dimension" : {
-                  "type" : "constant",
-                  "value" : 12
                 }
               },
-              "reference" : "14df9330-2140-49c9-b975-72f64c79a6f5",
+              "reference" : "96e8d827-6ff7-4d96-83d1-664b55dc56e0",
               "hasValidationError" : false,
-              "id" : "pbText",
+              "id" : "pbTitle",
               "description" : ""
             }
           ]
@@ -114,7 +70,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "a8e6b318-0ba6-45c8-83e2-f9f9cc808926",
+        "reference" : "4ce0ff4a-825b-4adf-9745-e516f77afe0a",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,13 +79,13 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "63f0097f-e899-4fca-a968-2f61f155fc9f",
+          "reference" : "676d6c90-00ef-4d75-8f91-eb972bb54db8",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
             [
               {
-                "type" : "component",
+                "type" : "container",
                 "dimension" : {
                   "md" : 12,
                   "sm" : 12,
@@ -137,35 +93,95 @@
                   "lg" : 12
                 },
                 "propertyValues" : {
+                  "repeatedCollection" : {
+                    "type" : "variable"
+                  },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "level" : {
-                    "type" : "constant",
-                    "value" : "Level 4"
-                  },
                   "cssClasses" : {
                     "type" : "constant",
                     "value" : ""
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "Premium Hiring Application"
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "left"
                   },
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
                   }
                 },
-                "reference" : "80631576-ba74-42d9-8e37-240463d18d87",
+                "reference" : "604c66f6-1e2d-4a72-8451-3f2c03c7e618",
                 "hasValidationError" : false,
-                "id" : "pbTitle",
-                "description" : ""
+                "id" : "pbContainer",
+                "rows" : [
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Uploaded C V"
+                        },
+                        "placeholder" : {
+                          "type" : "constant",
+                          "value" : "Browse to upload a new file..."
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.uploadedCV"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "url" : {
+                          "type" : "constant",
+                          "value" : "../API/formFileUpload"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "errorContent" : {
+                          "type" : "variable"
+                        }
+                      },
+                      "reference" : "b24f51b2-bae3-4a60-85e8-1c34eb45e403",
+                      "hasValidationError" : false,
+                      "id" : "pbUpload",
+                      "description" : ""
+                    }
+                  ]
+                ]
               }
             ],
             [
@@ -194,7 +210,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "3db3c36a-df4e-4b93-80df-84f9e28ea180",
+                "reference" : "a26eb1d8-6dd4-4e58-9522-1b55a508db91",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -208,126 +224,55 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
                         "hidden" : {
-                          "type" : "expression",
-                          "value" : "!premiumHiringApplication.candidate"
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
                         },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Candidate"
+                          "value" : "Uploaded Letter"
                         },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{candidate[0].firstname}} {{candidate[0].lastname}} | {{candidate[0].userName}}"
-                        },
-                        "alignment" : {
+                        "placeholder" : {
                           "type" : "constant",
-                          "value" : "left"
+                          "value" : "Browse to upload a new file..."
                         },
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
                         },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        }
-                      },
-                      "reference" : "6adad138-4219-4fc7-838b-1c47792cfbbd",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "disabled" : {
-                          "type" : "constant",
-                          "value" : false
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.uploadedLetter"
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
-                        "allowHTML" : {
+                        "url" : {
                           "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Agency Employee"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "placeholder" : {
-                          "type" : "interpolation"
-                        },
-                        "availableValues" : {
-                          "type" : "expression",
-                          "value" : "possibleAgencyEmployees"
-                        },
-                        "displayedKey" : {
-                          "type" : "constant",
-                          "value" : "userName"
-                        },
-                        "returnedKey" : {
-                          "type" : "constant",
-                          "value" : "id"
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "premiumHiringApplication.agencyEmployee"
+                          "value" : "../API/formFileUpload"
                         }
                       },
-                      "reference" : "bcec1c15-6fc7-4054-9f77-389b4efcb739",
+                      "reference" : "b6c37238-9dfd-462d-b777-dd207bc93092",
                       "hasValidationError" : false,
-                      "id" : "pbSelect"
+                      "id" : "pbUpload",
+                      "description" : ""
                     }
                   ]
                 ]
@@ -397,7 +342,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid || !premiumHiringApplication.agencyEmployee"
+                    "value" : "$form.$invalid"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -406,30 +351,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable"
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable"
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "8a084266-a30e-4fd8-a275-649858af6aec",
+                "reference" : "26e54b4a-620c-4be4-9d9a-61f4f914d0eb",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -481,7 +405,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "ad07f66a-a4b9-44b6-b37b-a9f60fc62a59",
+                "reference" : "797eac6f-84d8-4091-a021-3419e5336b04",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -494,14 +418,14 @@
   ],
   "assets" : [
     {
-      "id" : "938ac4aa-193b-43f9-9009-09e7ee56550e",
+      "id" : "eedb5848-d2a5-4d6a-8722-0a586744ebbc",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "f83e4f81-d9dc-4e8c-b5af-4493a00a1cd1",
+      "id" : "f3248212-3dc0-4d1c-8be6-492d87ea9d9a",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -517,10 +441,13 @@
       ],
       "exposed" : false
     },
-    "premiumHiringApplication_recommendedCompanies" : {
-      "type" : "url",
+    "formInput" : {
+      "type" : "json",
       "value" : [
-        "{{premiumHiringApplication|lazyRef:'recommendedCompanies'}}"
+        "{\r",
+        "  \"uploadedCV\" : null,\r",
+        "  \"uploadedLetter\" : null\r",
+        "}"
       ],
       "exposed" : false
     },
@@ -542,17 +469,9 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.premiumHiringApplication && $data.premiumHiringApplication_recommendedCompanies && $data.premiumHiringApplication_selectedCompany && $data.premiumHiringApplication_interview ){",
-        "\t//attach lazy references variables to parent variables",
-        "\t$data.premiumHiringApplication.recommendedCompanies = $data.premiumHiringApplication_recommendedCompanies;",
-        "\t$data.premiumHiringApplication.selectedCompany = $data.premiumHiringApplication_selectedCompany;",
-        "\t$data.premiumHiringApplication.interview = $data.premiumHiringApplication_interview;",
-        "\treturn {",
-        "\t\t//map premiumHiringApplication variable to expected task contract input",
-        "\t\tpremiumHiringApplicationInput: {",
-        "\t\t\tagencyEmployee: $data.premiumHiringApplication.agencyEmployee !== undefined ? $data.premiumHiringApplication.agencyEmployee : null",
-        "\t\t}",
-        "\t}",
+        "return {",
+        "\tuploadedCV: $data.formInput.uploadedCV,",
+        "\tuploadedLetter: $data.formInput.uploadedLetter",
         "}"
       ],
       "exposed" : false
@@ -564,51 +483,16 @@
       ],
       "exposed" : false
     },
-    "premiumHiringApplication" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.premiumHiringApplication_ref.link}}"
-      ],
-      "exposed" : false
-    },
-    "premiumHiringApplication_selectedCompany" : {
-      "type" : "url",
-      "value" : [
-        "{{premiumHiringApplication|lazyRef:'selectedCompany'}}"
-      ],
-      "exposed" : false
-    },
-    "premiumHiringApplication_interview" : {
-      "type" : "url",
-      "value" : [
-        "{{premiumHiringApplication|lazyRef:'interview'}}"
-      ],
-      "exposed" : false
-    },
     "taskId" : {
       "type" : "urlparameter",
       "value" : [
         "id"
       ],
       "exposed" : false
-    },
-    "possibleAgencyEmployees" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user?p=0&c=100&f=group_id=103"
-      ],
-      "exposed" : false
-    },
-    "candidate" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user?p=0&c=100&f=id={{premiumHiringApplication.candidate}}"
-      ],
-      "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "4e4dd6a2-e087-4294-b0fb-0345640717db",
+  "uuid" : "0a42d9be-c376-4198-b9c2-83de03b3e039",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }
