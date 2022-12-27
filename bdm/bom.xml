@@ -98,11 +98,11 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.Interview">
             <fields>
-                <field type="LOCALDATE" length="255" name="optionalDates" nullable="true" collection="true"/>
+                <field type="LOCALDATETIME" length="255" name="optionalDates" nullable="true" collection="true"/>
                 <field type="LONG" length="255" name="hrMember" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="projectTeamMembers" nullable="true" collection="true"/>
                 <field type="LONG" length="255" name="agencyEmployee" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="selectedDate" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="selectedDate" nullable="true" collection="false"/>
                 <relationField type="COMPOSITION" reference="com.company.model.InterviewerImpression" fetchType="LAZY" name="interviewImpressions" nullable="true" collection="true"/>
                 <field type="LONG" length="255" name="company" nullable="true" collection="false"/>
             </fields>
