@@ -142,6 +142,12 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="guest">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="Employee">
@@ -152,6 +158,9 @@
     </role>
     <role name="User">
       <displayName>User</displayName>
+    </role>
+    <role name="Guest">
+      <displayName>Guest</displayName>
     </role>
   </roles>
   <groups>
@@ -175,6 +184,9 @@
     </group>
     <group name="DevelopmentTeam" parentPath="/Company">
       <displayName>DevelopmentTeam</displayName>
+    </group>
+    <group name="Guest">
+      <displayName>Guest</displayName>
     </group>
   </groups>
   <memberships>
@@ -269,6 +281,11 @@
       <userName>company.employee1</userName>
       <roleName>Employee</roleName>
       <groupName>Company</groupName>
+    </membership>
+    <membership>
+      <userName>guest</userName>
+      <roleName>Guest</roleName>
+      <groupName>Guest</groupName>
     </membership>
   </memberships>
 </organization:Organization>

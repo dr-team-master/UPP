@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "clientRequestForm3",
   "name" : "clientRequestForm3",
-  "lastUpdate" : 1670351813194,
+  "lastUpdate" : 1672155013496,
   "rows" : [
     [
       {
@@ -1090,7 +1090,7 @@
                           "value" : true
                         },
                         "url" : {
-                          "type" : "constant",
+                          "type" : "expression",
                           "value" : "../API/formFileUpload"
                         },
                         "allowHTML" : {
