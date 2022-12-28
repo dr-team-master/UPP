@@ -137,7 +137,7 @@
                 <relationField type="AGGREGATION" reference="com.company.model.Company" fetchType="LAZY" name="selectedCompany" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="agencyEmployee" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="successful" nullable="true" collection="false"/>
-                <relationField type="COMPOSITION" reference="com.company.model.Interview" fetchType="LAZY" name="interview" nullable="true" collection="true"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Interview" fetchType="LAZY" name="interview" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
