@@ -1289,7 +1289,7 @@
               <expression xmi:type="expression:Expression" xmi:id="_2W3mMoVmEe2_lMnNw2qr3g" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
             </parameters>
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2W3mM4VmEe2_lMnNw2qr3g" key="message">
-              <expression xmi:type="expression:Expression" xmi:id="_2W3mNIVmEe2_lMnNw2qr3g" name="&lt;pattern-expression>" content="&lt;p>We are happy to inform you that your registration request has been approved!&lt;br />&#xA;Congratulations and welcome to agency!&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>Best regards,&lt;/p>&#xA;&#xA;&lt;p>Agency company team&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
+              <expression xmi:type="expression:Expression" xmi:id="_2W3mNIVmEe2_lMnNw2qr3g" name="&lt;pattern-expression>" content="&lt;p>We are happy to inform you that your registration request has been approved!&lt;br />&#xA;We are sending you the attached invoice for payment&amp;nbsp;for our services.&lt;/p>&#xA;&#xA;&lt;p>Congratulations and welcome to agency!&lt;/p>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;&#xA;&lt;p>Best regards,&lt;/p>&#xA;&#xA;&lt;p>Agency company team&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
             </parameters>
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2W3mNYVmEe2_lMnNw2qr3g" key="headers">
               <expression xmi:type="expression:TableExpression" xmi:id="_2W3mNoVmEe2_lMnNw2qr3g"/>
@@ -1301,7 +1301,11 @@
               <expression xmi:type="expression:Expression" xmi:id="_2W3mOoVmEe2_lMnNw2qr3g" content="" returnTypeFixed="true"/>
             </parameters>
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_2W3mO4VmEe2_lMnNw2qr3g" key="attachments">
-              <expression xmi:type="expression:ListExpression" xmi:id="_2W3mPIVmEe2_lMnNw2qr3g"/>
+              <expression xmi:type="expression:ListExpression" xmi:id="_2W3mPIVmEe2_lMnNw2qr3g">
+                <expressions xmi:type="expression:Expression" xmi:id="_rxzCIIt3Ee2dFZcJDRMU_Q" name="paymentInvoicePdf" content="paymentInvoicePdf" type="DOCUMENT_REF_TYPE">
+                  <referencedElements xmi:type="process:Document" xmi:id="_rxzCIYt3Ee2dFZcJDRMU_Q" name="paymentInvoicePdf"/>
+                </expressions>
+              </expression>
             </parameters>
           </configuration>
         </connectors>
@@ -1432,6 +1436,101 @@
             <operator xmi:type="expression:Operator" xmi:id="_2W40goVmEe2_lMnNw2qr3g" type="ASSIGNMENT"/>
           </outputs>
         </connectors>
+        <connectors xmi:type="process:Connector" xmi:id="_zpXisIt0Ee2dFZcJDRMU_Q" name="paymentInvoiceDoc" definitionId="document-templating" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.0.1">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_zpXisYt0Ee2dFZcJDRMU_Q" definitionId="document-templating" version="1.0.1" modelVersion="7.12.0-004">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_zpXisot0Ee2dFZcJDRMU_Q" key="documentInput">
+              <expression xmi:type="expression:Expression" xmi:id="_zpXis4t0Ee2dFZcJDRMU_Q" name="paymentInvoiceTemplate" content="paymentInvoiceTemplate" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                <referencedElements xmi:type="process:Document" xmi:id="_zpXitIt0Ee2dFZcJDRMU_Q" name="paymentInvoiceTemplate"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_zpXitYt0Ee2dFZcJDRMU_Q" key="replacements">
+              <expression xmi:type="expression:TableExpression" xmi:id="_zpXitot0Ee2dFZcJDRMU_Q">
+                <expressions xmi:type="expression:ListExpression" xmi:id="_zpXit4t0Ee2dFZcJDRMU_Q">
+                  <expressions xmi:type="expression:Expression" xmi:id="_zpXiuIt0Ee2dFZcJDRMU_Q" name="date" content="date" returnTypeFixed="true"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_zpXiuYt0Ee2dFZcJDRMU_Q" name="dateScript()" content="Date date = new Date()&#xD;&#xA;String datePart = date.format(&quot;dd/MM/yyyy&quot;)&#xD;&#xA;return datePart" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT"/>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_lJwzoIt2Ee2dFZcJDRMU_Q">
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzoYt2Ee2dFZcJDRMU_Q" name="processId" content="processId" returnTypeFixed="true"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzoot2Ee2dFZcJDRMU_Q" name="invoiceIdScript()" content="processInstanceId.toString()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_lJwzo4t2Ee2dFZcJDRMU_Q" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                  </expressions>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_lJwzpIt2Ee2dFZcJDRMU_Q">
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzpYt2Ee2dFZcJDRMU_Q" name="companyName" content="companyName" returnTypeFixed="true"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzpot2Ee2dFZcJDRMU_Q" name="companyNameScript()" content="companyRegistrationRequest.name" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_lJwzp4t2Ee2dFZcJDRMU_Q" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+                  </expressions>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_lJwzqIt2Ee2dFZcJDRMU_Q">
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzqYt2Ee2dFZcJDRMU_Q" name="companyId" content="companyId" returnTypeFixed="true"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzqot2Ee2dFZcJDRMU_Q" name="companyIdScript()" content="companyRegistrationRequest.persistenceId.toString()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_lJwzq4t2Ee2dFZcJDRMU_Q" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+                  </expressions>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_lJwzrIt2Ee2dFZcJDRMU_Q">
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzrYt2Ee2dFZcJDRMU_Q" name="companyPhone" content="companyPhone" returnTypeFixed="true"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzrot2Ee2dFZcJDRMU_Q" name="phoneNumberScript()" content="companyRegistrationRequest.phoneNumber" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_lJwzr4t2Ee2dFZcJDRMU_Q" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+                  </expressions>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_lJwzsIt2Ee2dFZcJDRMU_Q">
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzsYt2Ee2dFZcJDRMU_Q" name="streetNumber" content="streetNumber" returnTypeFixed="true"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzsot2Ee2dFZcJDRMU_Q" name="streetNumberScript()" content="companyRegistrationRequest.address.streetNumber" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_lJwzs4t2Ee2dFZcJDRMU_Q" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+                  </expressions>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_lJwztIt2Ee2dFZcJDRMU_Q">
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwztYt2Ee2dFZcJDRMU_Q" name="streetName" content="streetName" returnTypeFixed="true"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwztot2Ee2dFZcJDRMU_Q" name="streetNameScript()" content="companyRegistrationRequest.address.street" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_lJwzt4t2Ee2dFZcJDRMU_Q" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+                  </expressions>
+                </expressions>
+                <expressions xmi:type="expression:ListExpression" xmi:id="_lJwzuIt2Ee2dFZcJDRMU_Q">
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzuYt2Ee2dFZcJDRMU_Q" name="city" content="city" returnTypeFixed="true"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_lJwzuot2Ee2dFZcJDRMU_Q" name="cityScript()" content="companyRegistrationRequest.address.city" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_lJwzu4t2Ee2dFZcJDRMU_Q" name="companyRegistrationRequest" dataType="_XxRw9HWXEe21g5Lb2XJvjw" className="com.company.model.CompanyRegistrationRequest"/>
+                  </expressions>
+                </expressions>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_zpXiuot0Ee2dFZcJDRMU_Q" key="outputFileName">
+              <expression xmi:type="expression:Expression" xmi:id="_zpXiu4t0Ee2dFZcJDRMU_Q" name="paymentInvoice.docx" content="paymentInvoice.docx" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+          <outputs xmi:type="expression:Operation" xmi:id="_zpXivIt0Ee2dFZcJDRMU_Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_zpXivYt0Ee2dFZcJDRMU_Q" name="paymentInvoiceDoc" content="paymentInvoiceDoc" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_FKYQcIt3Ee2dFZcJDRMU_Q" name="paymentInvoiceDoc"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_zpXivot0Ee2dFZcJDRMU_Q" name="document" content="document" type="CONNECTOR_OUTPUT_TYPE" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+              <referencedElements xmi:type="definition:Output" xmi:id="_zpXiv4t0Ee2dFZcJDRMU_Q" name="document" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_zpXiwIt0Ee2dFZcJDRMU_Q" type="DOCUMENT_CREATE_UPDATE"/>
+          </outputs>
+        </connectors>
+        <connectors xmi:type="process:Connector" xmi:id="_SYURYIt3Ee2dFZcJDRMU_Q" name="paymentInvoicePdf" definitionId="document-converter" event="ON_FINISH" throwErrorEvent="true" namedError="GeneratePdfError" definitionVersion="1.0.2">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_SYURYYt3Ee2dFZcJDRMU_Q" definitionId="document-converter" version="1.0.2" modelVersion="7.12.0-004">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_SYURYot3Ee2dFZcJDRMU_Q" key="sourceDocument">
+              <expression xmi:type="expression:Expression" xmi:id="_SYURY4t3Ee2dFZcJDRMU_Q" name="paymentInvoiceDoc" content="paymentInvoiceDoc" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                <referencedElements xmi:type="process:Document" xmi:id="_SYURZIt3Ee2dFZcJDRMU_Q" name="paymentInvoiceDoc"/>
+              </expression>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_SYURZYt3Ee2dFZcJDRMU_Q" key="encoding">
+              <expression xmi:type="expression:Expression" xmi:id="_SYURZot3Ee2dFZcJDRMU_Q" name="encoding()" content="'utf-8'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+            </parameters>
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_SYURZ4t3Ee2dFZcJDRMU_Q" key="outputFileName">
+              <expression xmi:type="expression:Expression" xmi:id="_SYURaIt3Ee2dFZcJDRMU_Q" name="paymentInvoice.pdf" content="paymentInvoice.pdf" returnTypeFixed="true"/>
+            </parameters>
+          </configuration>
+          <outputs xmi:type="expression:Operation" xmi:id="_u1ZOoIt6Ee2dFZcJDRMU_Q">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_u1ZOoYt6Ee2dFZcJDRMU_Q" name="paymentInvoicePdf" content="paymentInvoicePdf" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_u1ZOoot6Ee2dFZcJDRMU_Q" name="paymentInvoicePdf"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_u1ZOo4t6Ee2dFZcJDRMU_Q" name="outputDocumentValue" content="outputDocumentValue" type="CONNECTOR_OUTPUT_TYPE" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+              <referencedElements xmi:type="definition:Output" xmi:id="_u1ZOpIt6Ee2dFZcJDRMU_Q" name="outputDocumentValue" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_u1ZOpYt6Ee2dFZcJDRMU_Q" type="DOCUMENT_CREATE_UPDATE"/>
+          </outputs>
+        </connectors>
         <loopCondition xmi:type="expression:Expression" xmi:id="_2W40g4VmEe2_lMnNw2qr3g" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         <loopMaximum xmi:type="expression:Expression" xmi:id="_2W40hIVmEe2_lMnNw2qr3g" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
         <cardinalityExpression xmi:type="expression:Expression" xmi:id="_2W40hYVmEe2_lMnNw2qr3g" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -1486,6 +1585,21 @@
       <contract xmi:type="process:Contract" xmi:id="_2Wo8o4VmEe2_lMnNw2qr3g">
         <inputs xmi:type="process:ContractInput" xmi:id="_2W7QeIVmEe2_lMnNw2qr3g" name="companyRegistrationRequest_persistenceId" type="LONG"/>
       </contract>
+      <documents xmi:type="process:Document" xmi:id="_2dQcEItzEe2dFZcJDRMU_Q" name="paymentInvoiceTemplate" defaultValueIdOfDocumentStore="invoice_p2_template.docx" documentType="INTERNAL">
+        <mimeType xmi:type="expression:Expression" xmi:id="_2dQcEYtzEe2dFZcJDRMU_Q" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_2dQcEotzEe2dFZcJDRMU_Q" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_2dQcE4tzEe2dFZcJDRMU_Q" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_Bhca4It3Ee2dFZcJDRMU_Q" name="paymentInvoiceDoc">
+        <mimeType xmi:type="expression:Expression" xmi:id="_Bhca4Yt3Ee2dFZcJDRMU_Q" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_Bhca4ot3Ee2dFZcJDRMU_Q" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_Bhca44t3Ee2dFZcJDRMU_Q" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_bNzrYIt3Ee2dFZcJDRMU_Q" name="paymentInvoicePdf">
+        <mimeType xmi:type="expression:Expression" xmi:id="_bNzrYYt3Ee2dFZcJDRMU_Q" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_bNzrYot3Ee2dFZcJDRMU_Q" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_bNzrY4t3Ee2dFZcJDRMU_Q" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_2Wo8kIVmEe2_lMnNw2qr3g">
         <name xmi:type="expression:Expression" xmi:id="_2Wo8kYVmEe2_lMnNw2qr3g" content="" returnTypeFixed="true"/>
         <value xmi:type="expression:Expression" xmi:id="_2Wo8koVmEe2_lMnNw2qr3g" content="" returnTypeFixed="true"/>
