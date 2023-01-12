@@ -25,7 +25,9 @@
       <lastName>Employee 1</lastName>
       <manager>premium.hiring.chief</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email></email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -33,7 +35,9 @@
       <firstName>Premium Hiring</firstName>
       <lastName>Chief</lastName>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email></email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -51,7 +55,9 @@
       <lastName>Employee 2</lastName>
       <manager>premium.hiring.chief</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email></email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -60,7 +66,9 @@
       <lastName>1</lastName>
       <manager>hr.chief</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email></email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -69,7 +77,9 @@
       <lastName>2</lastName>
       <manager>hr.chief</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email></email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
@@ -78,7 +88,9 @@
       <lastName>Chief</lastName>
       <manager>company.chief</manager>
       <personalData/>
-      <professionalData/>
+      <professionalData>
+        <email></email>
+      </professionalData>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
