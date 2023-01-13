@@ -134,6 +134,12 @@
       <lastName>1</lastName>
       <personalData>
         <email>client1@company.com</email>
+        <phoneNumber>0664888498</phoneNumber>
+        <mobileNumber>06565456546</mobileNumber>
+        <address>Bulevar despota Stefana 77</address>
+        <city>Novi Sad</city>
+        <state>Vojvodina</state>
+        <country>Serbia</country>
       </personalData>
       <professionalData>
         <email>client1@company.com</email>
